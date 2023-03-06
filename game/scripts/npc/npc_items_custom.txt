@@ -1,0 +1,273 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// VALUABLE ITEMS
+	//=================================================================================================================
+    
+        //=======================================
+        // Spider Legs - Valuable
+        //=======================================
+        "item_spider_legs_valuable"
+        {
+            "AbilityTextureName" 			"item_spider_legs_valuable"
+            "ItemCost"						"5"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"1"
+            "ItemInitialCharges"			"1"
+		    "ItemDisplayCharges"			"1"
+            "ItemKillable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Blue Crystal - Valuable
+        //=======================================
+        "item_blue_crystal_valuable"
+        {
+            "AbilityTextureName" 			"item_blue_crystal_valuable"
+            "ItemCost"						"20"
+            "ItemShopTags"					"common"
+            "ItemQuality"					"common"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "0"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Purple Crystal - Valuable
+        //=======================================
+        "item_purple_crystal_valuable"
+        {
+            "AbilityTextureName" 			"item_purple_crystal_valuable"
+            "ItemCost"						"20"
+            "ItemShopTags"					"common"
+            "ItemQuality"					"common"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "0"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Yellow Crystal - Valuable
+        //=======================================
+        "item_yellow_crystal_valuable"
+        {
+            "AbilityTextureName" 			"item_yellow_crystal_valuable"
+            "ItemCost"						"20"
+            "ItemShopTags"					"common"
+            "ItemQuality"					"common"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "0"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Energy Crystal - Valuable
+        //=======================================
+        "item_energy_crystal_valuable"
+        {
+            "AbilityTextureName" 			"item_energy_crystal_valuable"
+            "ItemCost"						"60"
+            "ItemShopTags"					"rare"
+            "ItemQuality"					"rare"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"1"
+            "ItemInitialCharges"			"1"
+		    "ItemDisplayCharges"			"1"
+            "ItemKillable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+            "ItemDisassembleRule"           "DOTA_ITEM_DISASSEMBLE_NEVER"
+        }
+
+
+    //=================================================================================================================
+	// ATTRIBUTES
+	//=================================================================================================================
+        /=================================================================================================================
+        // Book of Strength
+        //=================================================================================================================
+        "item_book_of_strength"
+        {
+            // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        
+            "Model"							"models/gameplay/attrib_tome_str.vmdl"
+            "skin" 							"1"
+
+            // Stats		
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityCooldown"				"0.0"
+
+            // Item Info
+            //-------------------------------------------------------------------------------------------------------------
+            "ItemCost"						"0"
+            "ItemShopTags"					"consumable"
+            "ItemQuality"					"consumable"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+            "ItemPermanent"					"0"
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
+            "ItemCastOnPickup"				"1"
+
+
+            // Special	
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"				"FIELD_INTEGER"
+                    "bonus_stat"			"3"
+                }
+            }
+        }
+
+        //=================================================================================================================
+        // Book of Agility
+        //=================================================================================================================
+        "item_book_of_agility"
+        {
+            // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+                                                                            
+            "Model"							"models/gameplay/attrib_tome_agi.vmdl"
+            "skin" 							"2"
+
+            // Stats		
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityCooldown"				"0.0"
+
+            // Item Info
+            //-------------------------------------------------------------------------------------------------------------
+            "ItemCost"						"150"
+            "ItemShopTags"					"consumable"
+            "ItemQuality"					"consumable"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+            "ItemPermanent"					"0"
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
+            "ItemCastOnPickup"				"1"
+
+            // Special	
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"				"FIELD_INTEGER"
+                    "bonus_stat"			"3"
+                }
+            }
+        }
+
+        //=================================================================================================================
+        // Book of Intelligence
+        //=================================================================================================================
+        "item_book_of_intelligence"
+        {
+            // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+            "Model"							"models/gameplay/attrib_tome_int.vmdl"
+                                                                                                                                                                                                                                                                                                                    
+            // Stats		
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityCooldown"				"0.0"
+
+            // Item Info
+            //-------------------------------------------------------------------------------------------------------------
+            "ItemCost"						"150"
+            "ItemShopTags"					"consumable"
+            "ItemQuality"					"consumable"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+            "ItemPermanent"					"0"
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
+            "ItemCastOnPickup"				"1"
+
+
+            // Special	
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"				"FIELD_INTEGER"
+                    "bonus_stat"			"3"
+                }
+            }
+        }
+
+    //=================================================================================================================
+	// KEYS
+	//=================================================================================================================
+
+    //=================================================================================================================
+	// TREASURE CHESTS
+	//=================================================================================================================
+
+
+    //=================================================================================================================
+	// RECIPES
+	//=================================================================================================================
+    "item_recipe_energy_crystal_valuable"
+    {
+        "ID"                  "5000"
+        "BaseClass"           "item_datadriven"
+        "ItemRecipe"          "1"
+        "ItemCost"            "0"
+        "ItemResult"          "item_energy_crystal_valuable"
+        "ItemRequirements"
+        {
+            "01" "item_blue_crystal_valuable;item_purple_crystal_valuable;item_yellow_crystal_valuable"
+        }
+    }
+}

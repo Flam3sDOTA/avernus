@@ -1,0 +1,46 @@
+<root>
+    <script>
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_TIMEOFDAY, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_HEROES, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_FLYOUT_SCOREBOARD, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_INVENTORY_PROTECT, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_QUICK_STATS, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ACTION_MINIMAP, false );
+
+		var NoTopLeftMenuButtons = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("MenuButtons");
+		var NoTPScrollUI = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("center_with_stats").FindChildTraverse("center_block");
+		var NoCourierControl = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("shop_launcher_block").FindChildTraverse("quickbuy").FindChildTraverse("ShopCourierControls");
+		var NoRightFlair = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("center_with_stats").FindChildTraverse("center_block");
+		var NoCommonItems = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("shop").FindChildTraverse("Main").FindChildTraverse("ItemCombinesAndBasicItemsContainer");
+		var NoCourierControl2 = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("shop_launcher_block").FindChildTraverse("quickbuy");
+		var NoAllNeutralItemsButton = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("shop").FindChildTraverse("Main").FindChildTraverse("HeightLimiter").FindChildTraverse("GridMainShop").FindChildTraverse("GridMainShopContents").FindChildTraverse("GridNeutralsCategory");
+
+
+		NoTopLeftMenuButtons.FindChildTraverse("DashboardButton").style.visibility = "collapse";
+        NoTopLeftMenuButtons.FindChildTraverse("ToggleScoreboardButton").style.visibility = "collapse";
+        NoTopLeftMenuButtons.FindChildTraverse("SettingsButton").style.visibility = "collapse";
+		NoTPScrollUI.FindChildTraverse("inventory_tpscroll_container").style.visibility = "collapse";
+		NoCourierControl.FindChildTraverse("courier").style.visibility = "collapse";
+		NoCourierControl2.FindChildTraverse("QuickBuyRows").style.visibility = "collapse";
+		NoRightFlair.FindChildTraverse("right_flare").style.visibility = "collapse";
+		NoRightFlair.FindChildTraverse("inventory_neutral_slot_container").style.visibility = "collapse";
+		NoCommonItems.FindChildTraverse("CommonItems").style.visibility = "collapse";
+		NoAllNeutralItemsButton.FindChildTraverse("ViewAllButton").style.visibility = "collapse";
+
+		GameUI.CustomUIConfig().team_colors = {}
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_GOODGUYS] = "#cc2727;"; // { 178, 34, 34 }		--		Red
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "#0ba30b;"; // { 0, 100, 0 }		--		Green
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_1] = "#259ef5;"; // { 30, 144, 225 }	--		Blue
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_2] = "#e3e332;"; // { 212, 212, 37 }	--		Yellow
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_3] = "#ffffff;"; // { 0, 0, 0 }	--
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_4] = "#ffffff;"; // { 0, 0, 0 }	--
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_5] = "#ffffff;"; // { 0, 0, 0 }	--		
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_6] = "#ffffff;"; // { 0, 0, 0 }	--		
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_7] = "#ffffff;"; // { 0, 0, 0 }	--		
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_8] = "#ffffff;"; // { 0, 0, 0 }	--	
+	</script>
+	<Panel>
+		<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/main/avernus_main.xml"/>
+	</Panel>
+</root>
