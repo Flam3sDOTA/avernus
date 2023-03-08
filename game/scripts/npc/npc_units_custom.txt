@@ -3,27 +3,28 @@
 	"Version"	"1"
 
 	//=================================================================================================================
-	// Treasure Chest
+	// Breakable Crate
 	//=================================================================================================================
-	"npc_treasure_chest"
+	"npc_dota_crate_custom"
 	{
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_generic/chest_treasure_02.vmdl"
+		"Model"						"models/gameplay/breakingcrate_dest.vmdl"
 		"Level"						"1"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"0.9"
+		"IsAncient"					"1"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"ability_nohealthbar"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"
+		"ArmorPhysical"				"0"
 		"MagicalResistance"			"0"
 
 		// Attack
@@ -69,9 +70,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"
-		"StatusHealthRegen"			"3"
-		"StatusMana"				"500"
+		"StatusHealth"				"30"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"0"
 		"StatusStartingMana"		"0"
 		"StatusManaRegen"			"0"
 
@@ -86,30 +87,72 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1"
 		"VisionNighttimeRange"		"1"
+
+		"DisableDamageDisplay"              "1"
+		"PathfindingSearchDepthScale"		"0.0"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"ItemDrops"
+			{
+				"Consumables"
+				{
+					"Item"
+					{
+						"1"  			"item_health_potion"
+						"2"				"item_mana_potion"
+					}
+					"Chance"			"100"
+				}
+				"StatTomes"
+				{
+					"Item"
+					{
+						"1"  			"item_book_of_strength"
+						"2"				"item_book_of_agility"
+						"3"				"item_book_of_intelligence"
+					}
+					"Chance"			"100"
+				}
+				"Trinkets"
+				{
+					"Item"
+					{
+						"1"				"item_boots_movement"
+						"2"				"item_blade_attack"
+						"3"				"item_gloves_speed"	
+					}
+					"Chance"			"100"
+				}
+			}
+		}
 	}
 
 	//=================================================================================================================
-	// Treasure Chest Anim
+	// Breakable Vase
 	//=================================================================================================================
-	"npc_treasure_chest_anim"
+	"npc_dota_vase_custom"
 	{
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_generic/chest_treasure_02_open.vmdl"
+		"Model"						"models/gameplay/breakingvase_dest.vmdl"
 		"Level"						"1"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"0.6"
+		"IsAncient"					"1"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"ability_nohealthbar"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"
+		"ArmorPhysical"				"0"
 		"MagicalResistance"			"0"
 
 		// Attack
@@ -155,9 +198,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"
-		"StatusHealthRegen"			"3"
-		"StatusMana"				"500"
+		"StatusHealth"				"30"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"0"
 		"StatusStartingMana"		"0"
 		"StatusManaRegen"			"0"
 
@@ -172,5 +215,46 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1"
 		"VisionNighttimeRange"		"1"
+
+		"DisableDamageDisplay"              "1"
+		"PathfindingSearchDepthScale"		"0.0"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"ItemDrops"
+			{
+				"Consumables"
+				{
+					"Item"
+					{
+						"1"  			"item_health_potion"
+						"2"				"item_mana_potion"
+					}
+					"Chance"			"100"
+				}
+				"StatTomes"
+				{
+					"Item"
+					{
+						"1"  			"item_book_of_strength"
+						"2"				"item_book_of_agility"
+						"3"				"item_book_of_intelligence"
+					}
+					"Chance"			"100"
+				}
+				"Trinkets"
+				{
+					"Item"
+					{
+						"1"				"item_boots_movement"
+						"2"				"item_blade_attack"
+						"3"				"item_gloves_speed"	
+					}
+					"Chance"			"100"
+				}
+			}
+		}
 	}
 }

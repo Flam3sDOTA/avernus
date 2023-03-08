@@ -1,5 +1,28 @@
 "DOTAAbilities"
 {
+	//============================================================
+	//  No Health Bar
+	//============================================================
+	"ability_nohealthbar"
+	{
+		"BaseClass"             	"ability_datadriven"
+		"AbilityBehavior"         	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"                	"1"
+		"AbilityTextureName"   	  	"nohealthbar"
+		"Modifiers"
+		{
+			"ability_nohealthbar_modifier"
+			{
+				"Passive"    "1"
+				"IsHidden"	 "1"
+				"States"
+				{
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
     //=================================================================================================================
 	// Juggernaut: Blade Fury (Lua version)
     // Credits: https://github.com/Elfansoer/dota-2-lua-abilities/tree/master/scripts/vscripts/lua_abilities/juggernaut_blade_fury_lua

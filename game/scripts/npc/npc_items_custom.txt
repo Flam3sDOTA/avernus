@@ -10,7 +10,31 @@
         "item_spider_legs_valuable"
         {
             "AbilityTextureName" 			"item_spider_legs_valuable"
-            "ItemCost"						"5"
+            "ItemCost"						"2"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"1"
+            "ItemInitialCharges"			"1"
+		    "ItemDisplayCharges"			"1"
+            "ItemKillable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+        }
+
+         //=======================================
+        // Bones - Valuable
+        //=======================================
+        "item_bones_valuable"
+        {
+            "AbilityTextureName" 			"item_bones_valuable"
+            "ItemCost"						"2"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
             //-------------------------------------------------------------------------------------------------------------
@@ -256,6 +280,100 @@
             "ItemInitialCharges"			"1"
             "ItemKillable"					"0"
         }
+
+    //=================================================================================================================
+	// Health Potion
+	//=================================================================================================================
+	"item_health_potion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"item_health_potion"
+		"ScriptFile"					"items/item_health_potion"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"Model"							"models/props_gameplay/bottle_rejuvenation.vmdl"
+		"ItemKillable"					"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"99999"
+		"ItemPurchasable"				"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_restore_pct"		"40"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Mana Potion
+	//=================================================================================================================
+	"item_mana_potion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"item_mana_potion"
+		"ScriptFile"					"items/item_mana_potion"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"Model"							"models/props_gameplay/bottle_mango001.vmdl"
+		"ItemKillable"					"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"99999"
+		"ItemPurchasable"				"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_restore_pct"		"40"
+			}
+		}
+	}
 
 
     //=================================================================================================================

@@ -9,6 +9,8 @@ g_ModelPrecache =
 	"models/gameplay/attrib_tome_str.vmdl",
 	"models/gameplay/attrib_tome_agi.vmdl",
 	"models/gameplay/attrib_tome_int.vmdl",
+	"models/gameplay/breakingvase_dest.vmdl",
+	"models/gameplay/breakingcrate_dest.vmdl",
 
 	-- Heroes
 	"models/heroes/beastmaster/beastmaster.vmdl",
@@ -23,8 +25,8 @@ g_ParticlePrecache =
 
 	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf",
 	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf",
-	"particles/econ/items/juggernaut/jugg_ti8_sword/juggernaut_blade_fury_abyssal.vpcf",
-	"particles/econ/items/juggernaut/jugg_ti8_sword/juggernaut_blade_fury_abyssal_tgt.vpcf",
+	"particles/items3_fx/fish_bones_active.vpcf",
+	"particles/items3_fx/mango_active.vpcf",
 }
 
 g_ParticleFolderPrecache =
