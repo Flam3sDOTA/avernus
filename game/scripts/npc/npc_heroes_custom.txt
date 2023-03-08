@@ -15,7 +15,7 @@
 		"VoiceFile"						"soundevents/voscripts/game_sounds_vo_beastmaster.vsndevts"
 		"SoundSet"						"Hero_Beastmaster"
     
-        "Ability1"                    	""
+        "Ability1"                    	"juggernaut_blade_fury_lua"
         "Ability2"                    	""
         "Ability3"                    	""
         "Ability4"                    	""

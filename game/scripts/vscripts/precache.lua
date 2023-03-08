@@ -20,6 +20,11 @@ g_ParticlePrecache =
 {
 	"particles/units/heroes/hero_drow/drow_base_attack.vpcf",
 	"particles/units/heroes/hero_invoker/invoker_base_attack.vpcf",
+
+	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf",
+	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf",
+	"particles/econ/items/juggernaut/jugg_ti8_sword/juggernaut_blade_fury_abyssal.vpcf",
+	"particles/econ/items/juggernaut/jugg_ti8_sword/juggernaut_blade_fury_abyssal_tgt.vpcf",
 }
 
 g_ParticleFolderPrecache =
@@ -49,4 +54,8 @@ g_SoundPrecache =
 	"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts",
 	"soundevents/voscripts/game_sounds_vo_invoker.vsndevts",
+
+	-- Abilities
+	"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts",
+	"sounds/vo/beastmaster/beas_ability_animalsound_02.vsnd",
 }
