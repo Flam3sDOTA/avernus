@@ -9,10 +9,17 @@ g_ModelPrecache =
 	"models/gameplay/attrib_tome_str.vmdl",
 	"models/gameplay/attrib_tome_agi.vmdl",
 	"models/gameplay/attrib_tome_int.vmdl",
+
+	-- Heroes
+	"models/heroes/beastmaster/beastmaster.vmdl",
+	"models/heroes/drow/drow_base.vmdl",
+	"models/heroes/invoker/invoker.vmdl",
 }
 
 g_ParticlePrecache =
 {
+	"particles/units/heroes/hero_drow/drow_base_attack.vpcf",
+	"particles/units/heroes/hero_invoker/invoker_base_attack.vpcf",
 }
 
 g_ParticleFolderPrecache =
@@ -36,4 +43,10 @@ g_SoundPrecache =
 	-- Hero Sounds
 	"soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts",
 	"soundevents/voscripts/game_sounds_vo_wisp.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts",
+	"soundevents/voscripts/game_sounds_vo_beastmaster.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts",
+	"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts",
+	"soundevents/voscripts/game_sounds_vo_invoker.vsndevts",
 }
