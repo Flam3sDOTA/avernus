@@ -11,6 +11,8 @@ g_ModelPrecache =
 	"models/gameplay/attrib_tome_int.vmdl",
 	"models/gameplay/breakingvase_dest.vmdl",
 	"models/gameplay/breakingcrate_dest.vmdl",
+	"models/props_gameplay/bottle_rejuvenation.vmdl",
+	"models/props_gameplay/bottle_mango001.vmdl",
 
 	-- Heroes
 	"models/heroes/beastmaster/beastmaster.vmdl",

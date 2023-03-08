@@ -21,7 +21,7 @@
             "ItemStackable"					"1"
             "ItemInitialCharges"			"1"
 		    "ItemDisplayCharges"			"1"
-            "ItemKillable"					"1"
+            "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
@@ -45,7 +45,7 @@
             "ItemStackable"					"1"
             "ItemInitialCharges"			"1"
 		    "ItemDisplayCharges"			"1"
-            "ItemKillable"					"1"
+            "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
@@ -67,7 +67,7 @@
             "Model"							"models/props_gameplay/red_box.vmdl"
             "ItemPurchasable"				"0"
             "ItemStackable"					"0"
-            "ItemKillable"					"1"
+            "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
             "ItemSellable"                  "0"
@@ -89,7 +89,7 @@
             "Model"							"models/props_gameplay/red_box.vmdl"
             "ItemPurchasable"				"0"
             "ItemStackable"					"0"
-            "ItemKillable"					"1"
+            "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
             "ItemSellable"                  "0"
@@ -113,12 +113,36 @@
             "ItemStackable"					"1"
             "ItemInitialCharges"			"1"
 		    "ItemDisplayCharges"			"1"
-            "ItemKillable"					"1"
+            "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
             "ItemDroppable" 				"1"
             "ItemDisassembleRule"           "DOTA_ITEM_DISASSEMBLE_NEVER"
+        }
+
+        //=======================================
+        // Midas Coin - Valuable
+        //=======================================
+        "item_midas_coin_valuable"
+        {
+            "AbilityTextureName" 			"item_midas_coin_valuable"
+            "ItemCost"						"250"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"1"
+            "ItemInitialCharges"			"1"
+		    "ItemDisplayCharges"			"1"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
         }
 
 
@@ -260,7 +284,6 @@
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
             "Model"							"models/props_gameplay/gold_bag.vmdl"
-            "ItemKillable"					"0"
             "AbilityTextureName" 			"item_custom_gold_bag"
 
             // Stats
@@ -296,7 +319,6 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"Model"							"models/props_gameplay/bottle_rejuvenation.vmdl"
-		"ItemKillable"					"0"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -343,7 +365,6 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"Model"							"models/props_gameplay/bottle_mango001.vmdl"
-		"ItemKillable"					"0"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
