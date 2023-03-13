@@ -119,7 +119,7 @@
 					}
 					"Chance"			"5"
 				}
-				"StatItems"
+				"Items"
 				{
 					"Item"
 					{
@@ -130,15 +130,23 @@
 					}
 					"Chance"			"20"
 				}
-				"Valuables"
+				"ValuablesCommon"
 				{
 					"Item"
 					{
-						"1"				"item_spider_legs_valuable"	
+						"1"				"item_spider_legs_valuable"
 						"2"				"item_bones_valuable"
-						"3"				"item_energy_crystal_valuable"
+						"3"				"item_dead_fish_valuable"
 					}
-					"Chance"			"20"
+					"Chance"			"25"
+				}
+				"ValuablesUncommon"
+				{
+					"Item"
+					{
+						"1"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"15"
 				}
 				"ValuablesRare"
 				{
@@ -269,7 +277,7 @@
 					}
 					"Chance"			"5"
 				}
-				"StatItems"
+				"Items"
 				{
 					"Item"
 					{
@@ -280,15 +288,23 @@
 					}
 					"Chance"			"20"
 				}
-				"Valuables"
+				"ValuablesCommon"
 				{
 					"Item"
 					{
-						"1"				"item_spider_legs_valuable"	
+						"1"				"item_spider_legs_valuable"
 						"2"				"item_bones_valuable"
-						"3"				"item_energy_crystal_valuable"
+						"3"				"item_dead_fish_valuable"
 					}
 					"Chance"			"20"
+				}
+				"ValuablesUncommon"
+				{
+					"Item"
+					{
+						"1"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"10"
 				}
 				"ValuablesRare"
 				{

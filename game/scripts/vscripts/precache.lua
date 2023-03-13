@@ -19,6 +19,9 @@ g_ModelPrecache =
 	"models/heroes/beastmaster/beastmaster.vmdl",
 	"models/heroes/drow/drow_base.vmdl",
 	"models/heroes/invoker/invoker.vmdl",
+
+	"models/props_gameplay/treasure_chest_gold.vmdl",
+	"models/props_gameplay/treasure_chest001.vmdl",
 }
 
 g_ParticlePrecache =

@@ -54,6 +54,13 @@
 		"ItemStockInitial"				"2"
 		"ItemStockTime"					"135"
 		"ItemPurchasable" 				"1"
+		"AbilityValues"
+		{
+			"lifetime"					"360"
+			"vision_range_tooltip"		"1600"
+			"health"					"200"
+			"duration_minutes_tooltip"	"6"
+		}
 	}
 
     "item_ward_sentry"

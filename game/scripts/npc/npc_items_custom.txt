@@ -4,7 +4,7 @@
 	// VALUABLE ITEMS
 	//=================================================================================================================
         //=======================================
-        // Spider Legs - Valuable
+        // Spider Legs - Valuable - Common: Sell Price 5
         //=======================================
         "item_spider_legs_valuable"
         {
@@ -25,8 +25,8 @@
             "ItemDroppable" 				"1"
         }
 
-         //=======================================
-        // Bones - Valuable
+        //=======================================
+        // Bones - Valuable - Common: Sell Price 5
         //=======================================
         "item_bones_valuable"
         {
@@ -48,7 +48,29 @@
         }
 
         //=======================================
-        // Energy Crystal - Valuable
+        // Dead Fish - Valuable - Common: Sell Price 5
+        //=======================================
+        "item_dead_fish_valuable"
+        {
+            "AbilityTextureName" 			"item_dead_fish_valuable"
+            "ItemCost"						"5"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Energy Crystal - Valuable - Uncommon: Sell Price 50
         //=======================================
         "item_energy_crystal_valuable"
         {
@@ -71,7 +93,7 @@
         }
 
         //=======================================
-        // Midas Coin - Valuable
+        // Midas Coin - Valuable - Rare: Sell Price 250
         //=======================================
         "item_midas_coin_valuable"
         {
@@ -350,10 +372,6 @@
 	//=================================================================================================================
 
     //=================================================================================================================
-	// TREASURE CHESTS
-	//=================================================================================================================
-
-    //=================================================================================================================
 	// SHARED ITEMS
 	//=================================================================================================================
         "item_boots_movement"
@@ -545,7 +563,72 @@
                 }
 		    }			
 	    }
+        
+    //=================================================================================================================
+	// TREASURE CHESTS
+	//=================================================================================================================
+    "item_chest_normal"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "BaseClass"                     "item_datadriven"
+        "AbilityTextureName"            "item_chest_normal"
+        "ItemShareability"              "ITEM_FULLY_SHAREABLE"
+        "Model"                         "models/props_gameplay/treasure_chest001.vmdl"
+        "ItemKillable"                  "0"
+        "ItemSellable"                  "0"
+        "ItemPurchasable"               "0"
+        "ItemDroppable"                 "1"
+        "ItemCost"                      "0" 
+        "ItemQuality"                   "common"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityCooldown"               "1.0"
+        "AbilityChannelTime"            "1.0"
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "loots/chest.lua"
+                "Function"              "chest_open"
+                "chest_name"            "chest_normal" 
+                "gold"                  "0"
+                "gold_amt"              "0"
+                "gold_rand"             "0"
 
+            }
+        }
+    }
+
+    "item_chest_golden"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_chest_golden"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"Model"							"models/props_gameplay/treasure_chest_gold.vmdl"
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"1"
+		"ItemCost"						"0" 
+		"ItemQuality"					"artifact"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityCooldown"               "1.0"
+        "AbilityChannelTime"            "1.0"
+		"OnChannelSucceeded"
+		{
+			"RunScript"
+		    {
+		        "ScriptFile"			"loots/chest.lua"
+				"Function"				"chest_open"
+				"chest_name"			"chest_golden"
+				"gold"					"0"
+				"gold_amt"				"0"
+				"gold_rand"				"0"
+		    }
+		}
+	}
 
     //=================================================================================================================
 	// RECIPES
