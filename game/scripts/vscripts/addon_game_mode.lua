@@ -91,7 +91,7 @@ function avernus:InitGameMode()
 	GameRules:SetSameHeroSelectionEnabled(true)
 	GameRules:SetHideKillMessageHeaders(true)
 	GameRules:LockCustomGameSetupTeamAssignment(true)
-	GameRules:SetUseUniversalShopMode(false)
+	GameRules:SetUseUniversalShopMode(true)
 	GameRules:SetHeroRespawnEnabled(true)
 	GameRules:SetSafeToLeave(true)
 	GameRules:SetCustomGameSetupAutoLaunchDelay(3)
@@ -129,14 +129,15 @@ function avernus:InitGameMode()
 	GameMode:SetRecommendedItemsDisabled(true)
 	GameMode:SetSelectionGoldPenaltyEnabled(false)
 	GameMode:SetKillingSpreeAnnouncerDisabled(true)
+	GameMode:SetCanSellAnywhere(true)
 	--GameMode:SetCustomGameForceHero("npc_dota_hero_wisp")
 	--GameMode:SetTPScrollSlotItemOverride("item_blink")
 
 	XP_PER_LEVEL_TABLE = {
-		99999, -- 1
-		99999, -- 2
-		99999, -- 3
-		99999, -- 4
+		3131, -- 1
+		3131, -- 2
+		3131, -- 3
+		3131, -- 4
 		99999, -- 5
 		99999, -- 6
 		99999, -- 7
@@ -161,8 +162,7 @@ function avernus:InitGameMode()
 		99999,  -- 26
 		99999,  -- 27
 		99999,  -- 28
-		99999,  -- 29
-		99999,  -- 30
+		99999  -- 29
 	}
 
 	-- Events
@@ -171,6 +171,7 @@ function avernus:InitGameMode()
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(avernus, 'OnEntityKilled'), self)
 	ListenToGameEvent('entity_hurt', Dynamic_Wrap(avernus, 'OnEntityHurt'), self)
 	ListenToGameEvent('game_rules_state_change', Dynamic_Wrap( avernus, 'OnGameRulesStateChange' ), self )
+	ListenToGameEvent('dota_item_picked_up', Dynamic_Wrap(avernus, 'OnItemPickedUp'), self)
 
 	MAX_NUMBER_OF_TEAMS = 4   
 	CUSTOM_TEAM_PLAYER_COUNT = {}        

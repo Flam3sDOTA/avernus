@@ -44,7 +44,7 @@ function avernus:OnTeamKillCredit(event)
 end
 
 ---------------------------------------------------------------------------
--- Event: OnEntityKilled & RollDrops
+-- Event: OnEntityKilled
 ---------------------------------------------------------------------------
 function avernus:OnEntityKilled(event)
   local killed = EntIndexToHScript(event.entindex_killed)
@@ -68,16 +68,27 @@ function avernus:OnGameRulesStateChange()
   end
 end
 
+---------------------------------------------------------------------------
+-- Event: OnItemPickedUp
+---------------------------------------------------------------------------
+function avernus:OnItemPickedUp(event)
+  local item = EntIndexToHScript(event.ItemEntityIndex)
+  hCollector = EntIndexToHScript(event.HeroEntityIndex)
+
+  if hCollector and hCollector:IsHero() and item then
+    item:SetPurchaseTime(99999)
+  end
+end
 
 function InitializeCrates()
-  for i=1,42 do
+  for i=1,44 do
     local cratespawnpoint = Entities:FindByName(nil, "CratesSpawnPoint" .. i):GetAbsOrigin()
     local crate = CreateUnitByName("npc_dota_crate_custom", cratespawnpoint, true, nil, nil, DOTA_TEAM_NEUTRALS)
   end
 end
 
 function InitializeVases()
-  for i=1,26 do
+  for i=1,46 do
     local vasespawnpoint = Entities:FindByName(nil, "VasesSpawnPoint" .. i):GetAbsOrigin()
     local vase = CreateUnitByName("npc_dota_vase_custom", vasespawnpoint, true, nil, nil, DOTA_TEAM_NEUTRALS)
   end

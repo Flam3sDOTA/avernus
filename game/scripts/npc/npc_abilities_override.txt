@@ -3,8 +3,98 @@
   "Version"   "1"
   
   // ====== ALLOWED ITEMS START ======
-  
-  
+
+  	"item_flask"
+	{
+		"ItemCost"						"50"
+		"ItemPurchasable" 				"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health_regen"			"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"break_on_hero_damage"	"1"
+			}
+		}
+	}
+
+	"item_clarity"
+	{
+		"ItemPurchasable" 				"1"
+		"ItemCost"						"50"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen"			"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"15"
+			}			
+		}
+	}
+
+	"item_ward_observer"
+	{
+		"ItemCost"						"5"
+		"ItemStockMax"					"4"
+		"ItemStockInitial"				"2"
+		"ItemStockTime"					"135"
+		"ItemPurchasable" 				"1"
+	}
+
+    "item_ward_sentry"
+	{
+		"ItemCost"						"10"
+		"ItemStockMax"					"8"
+		"ItemStockInitial"				"3"
+		"ItemStockTime"					"70"
+		"ItemPurchasable" 				"1"
+	}
+
+	"item_tome_of_knowledge"
+	{
+
+		"ItemCost"						"0"
+		"ItemStackable"					"0"
+		"ItemPermanent"					"0"
+		"ItemStockMax"					"0"
+		"ItemInitialCharges"			"1"
+    	"ItemDisplayCharges"			"1"
+        "ItemCastOnPickup"				"1"
+		"ItemStockInitial"				"0"
+		"ItemPurchasable"				"0"
+		"ItemStockTime"					"9999.0"			  
+		"ItemInitialStockTime"			"9999.0"  
+		"BonusDelayedStockCount"		"0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_bonus"				"100"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_per_use"			"20"
+			}
+		}
+	}
+
   // ====== ALLOWED ITEMS END ======
 	
 	"item_wind_lace"
@@ -15,19 +105,7 @@
 	{
 		"ItemPurchasable" "0"
 	}
-	 "item_flask"
-	{
-		"ItemPurchasable" "0"
-	}
      "item_tango"
-	{
-		"ItemPurchasable" "0"
-	}
-     "item_ward_observer"
-	{
-		"ItemPurchasable" "0"
-	}
-     "item_ward_sentry"
 	{
 		"ItemPurchasable" "0"
 	}
@@ -43,7 +121,6 @@
 	{
 		"ItemPurchasable" "0"
 	}
-  
 	 "item_kaya_and_sange"
    	{
 		"ItemPurchasable" "0"
@@ -213,10 +290,6 @@
 		"ItemPurchasable" "0"
 	}
 	"item_ghost"
-	{
-		"ItemPurchasable" "0"
-	}
-	"item_clarity"
 	{
 		"ItemPurchasable" "0"
 	}
@@ -980,7 +1053,7 @@
 	{
 		"ItemPurchasable" "0"
 	}
-  "item_recipe_moon_shard"
+  	"item_recipe_moon_shard"
 	{
 		"ItemPurchasable" "0"
 	}
@@ -1077,10 +1150,6 @@
 		"ItemPurchasable" "0"
 	}
 	"item_infused_raindrop"
-	{
-		"ItemPurchasable" "0"
-	}
-	"item_tome_of_knowledge"
 	{
 		"ItemPurchasable" "0"
 	}
@@ -1192,7 +1261,6 @@
 	{
 		"ItemPurchasable" "0"
 	}
-	
 	"item_recipe_witch_blade"
 	{
 		"ItemPurchasable" "0"

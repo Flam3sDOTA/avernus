@@ -2,6 +2,8 @@
 {
 	"consumables"
 	{
+		"item"	"item_flask"
+		"item"	"item_clarity"
 	}
 
 	"attributes"
@@ -14,6 +16,8 @@
 
 	"misc"
 	{
+		"item"	"item_ward_observer"
+		"item"	"item_ward_sentry"
 	}	
 	
 	

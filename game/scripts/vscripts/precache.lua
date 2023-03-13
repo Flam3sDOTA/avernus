@@ -13,6 +13,7 @@ g_ModelPrecache =
 	"models/gameplay/breakingcrate_dest.vmdl",
 	"models/props_gameplay/bottle_rejuvenation.vmdl",
 	"models/props_gameplay/bottle_mango001.vmdl",
+	"models/props_gameplay/gold_coin_overthrow.vmdl",
 
 	-- Heroes
 	"models/heroes/beastmaster/beastmaster.vmdl",
@@ -29,6 +30,8 @@ g_ParticlePrecache =
 	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf",
 	"particles/items3_fx/fish_bones_active.vpcf",
 	"particles/items3_fx/mango_active.vpcf",
+
+	"particles/units/heroes/hero_monkey_king/monkey_king_jump_armor_debuff_model.vpcf",
 }
 
 g_ParticleFolderPrecache =

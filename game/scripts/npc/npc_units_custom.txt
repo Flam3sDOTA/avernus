@@ -102,9 +102,11 @@
 					"Item"
 					{
 						"1"  			"item_health_potion"
-						"2"				"item_mana_potion"
+						"2"				"item_health_potion"
+						"3"				"item_mana_potion"
+						"4"				"item_mana_potion"
 					}
-					"Chance"			"100"
+					"Chance"			"25"
 				}
 				"StatTomes"
 				{
@@ -113,18 +115,38 @@
 						"1"  			"item_book_of_strength"
 						"2"				"item_book_of_agility"
 						"3"				"item_book_of_intelligence"
+						"4"				"item_tome_of_knowledge"
 					}
-					"Chance"			"100"
+					"Chance"			"5"
 				}
-				"Trinkets"
+				"StatItems"
 				{
 					"Item"
 					{
 						"1"				"item_boots_movement"
 						"2"				"item_blade_attack"
 						"3"				"item_gloves_speed"	
+						"4"				"item_blight_orb"
 					}
-					"Chance"			"100"
+					"Chance"			"20"
+				}
+				"Valuables"
+				{
+					"Item"
+					{
+						"1"				"item_spider_legs_valuable"	
+						"2"				"item_bones_valuable"
+						"3"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"20"
+				}
+				"ValuablesRare"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"	
+					}
+					"Chance"			"5"
 				}
 			}
 		}
@@ -230,9 +252,11 @@
 					"Item"
 					{
 						"1"  			"item_health_potion"
-						"2"				"item_mana_potion"
+						"2"				"item_health_potion"
+						"3"				"item_mana_potion"
+						"4"				"item_mana_potion"
 					}
-					"Chance"			"100"
+					"Chance"			"25"
 				}
 				"StatTomes"
 				{
@@ -241,20 +265,41 @@
 						"1"  			"item_book_of_strength"
 						"2"				"item_book_of_agility"
 						"3"				"item_book_of_intelligence"
+						"4"				"item_tome_of_knowledge"
 					}
-					"Chance"			"100"
+					"Chance"			"5"
 				}
-				"Trinkets"
+				"StatItems"
 				{
 					"Item"
 					{
 						"1"				"item_boots_movement"
 						"2"				"item_blade_attack"
 						"3"				"item_gloves_speed"	
+						"4"				"item_blight_orb"
 					}
-					"Chance"			"100"
+					"Chance"			"20"
+				}
+				"Valuables"
+				{
+					"Item"
+					{
+						"1"				"item_spider_legs_valuable"	
+						"2"				"item_bones_valuable"
+						"3"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"20"
+				}
+				"ValuablesRare"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"	
+					}
+					"Chance"			"5"
 				}
 			}
 		}
 	}
+
 }

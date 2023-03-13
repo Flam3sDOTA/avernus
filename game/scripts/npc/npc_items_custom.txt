@@ -3,14 +3,13 @@
     //=================================================================================================================
 	// VALUABLE ITEMS
 	//=================================================================================================================
-    
         //=======================================
         // Spider Legs - Valuable
         //=======================================
         "item_spider_legs_valuable"
         {
             "AbilityTextureName" 			"item_spider_legs_valuable"
-            "ItemCost"						"2"
+            "ItemCost"						"5"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
             //-------------------------------------------------------------------------------------------------------------
@@ -18,9 +17,7 @@
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
             "Model"							"models/props_gameplay/red_box.vmdl"
             "ItemPurchasable"				"0"
-            "ItemStackable"					"1"
-            "ItemInitialCharges"			"1"
-		    "ItemDisplayCharges"			"1"
+            "ItemStackable"					"0"
             "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
@@ -34,7 +31,7 @@
         "item_bones_valuable"
         {
             "AbilityTextureName" 			"item_bones_valuable"
-            "ItemCost"						"2"
+            "ItemCost"						"5"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
             //-------------------------------------------------------------------------------------------------------------
@@ -42,57 +39,11 @@
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
             "Model"							"models/props_gameplay/red_box.vmdl"
             "ItemPurchasable"				"0"
-            "ItemStackable"					"1"
-            "ItemInitialCharges"			"1"
-		    "ItemDisplayCharges"			"1"
+            "ItemStackable"					"0"
             "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
-            "ItemDroppable" 				"1"
-        }
-
-        //=======================================
-        // Blue Crystal - Valuable
-        //=======================================
-        "item_blue_crystal_valuable"
-        {
-            "AbilityTextureName" 			"item_blue_crystal_valuable"
-            "ItemCost"						"20"
-            "ItemShopTags"					"common"
-            "ItemQuality"					"common"
-            //-------------------------------------------------------------------------------------------------------------
-            "BaseClass"                     "item_datadriven"
-            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl"
-            "ItemPurchasable"				"0"
-            "ItemStackable"					"0"
-            "ItemKillable"					"0"
-            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
-            "ItemPermanent"					"0"
-            "ItemSellable"                  "0"
-            "ItemDroppable" 				"1"
-        }
-
-        //=======================================
-        // Purple Crystal - Valuable
-        //=======================================
-        "item_purple_crystal_valuable"
-        {
-            "AbilityTextureName" 			"item_purple_crystal_valuable"
-            "ItemCost"						"20"
-            "ItemShopTags"					"common"
-            "ItemQuality"					"common"
-            //-------------------------------------------------------------------------------------------------------------
-            "BaseClass"                     "item_datadriven"
-            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl"
-            "ItemPurchasable"				"0"
-            "ItemStackable"					"0"
-            "ItemKillable"					"0"
-            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
-            "ItemPermanent"					"0"
-            "ItemSellable"                  "0"
             "ItemDroppable" 				"1"
         }
 
@@ -102,7 +53,7 @@
         "item_energy_crystal_valuable"
         {
             "AbilityTextureName" 			"item_energy_crystal_valuable"
-            "ItemCost"						"60"
+            "ItemCost"						"50"
             "ItemShopTags"					"rare"
             "ItemQuality"					"rare"
             //-------------------------------------------------------------------------------------------------------------
@@ -110,9 +61,7 @@
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
             "Model"							"models/props_gameplay/red_box.vmdl"
             "ItemPurchasable"				"0"
-            "ItemStackable"					"1"
-            "ItemInitialCharges"			"1"
-		    "ItemDisplayCharges"			"1"
+            "ItemStackable"					"0"
             "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
@@ -127,17 +76,16 @@
         "item_midas_coin_valuable"
         {
             "AbilityTextureName" 			"item_midas_coin_valuable"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
             "ItemCost"						"250"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
             //-------------------------------------------------------------------------------------------------------------
             "BaseClass"                     "item_datadriven"
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl"
+            "Model"							"models/props_gameplay/gold_coin_overthrow.vmdl"
             "ItemPurchasable"				"0"
-            "ItemStackable"					"1"
-            "ItemInitialCharges"			"1"
-		    "ItemDisplayCharges"			"1"
+            "ItemStackable"					"0"
             "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
@@ -304,97 +252,97 @@
             "ItemKillable"					"0"
         }
 
-    //=================================================================================================================
-	// Health Potion
-	//=================================================================================================================
-	"item_health_potion"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_lua"
-		"AbilityTextureName"			"item_health_potion"
-		"ScriptFile"					"items/item_health_potion"
+        //=================================================================================================================
+        // Health Potion
+        //=================================================================================================================
+        "item_health_potion"
+        {
+            // General
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"						"item_lua"
+            "AbilityTextureName"			"item_health_potion"
+            "ScriptFile"					"items/item_health_potion"
 
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"Model"							"models/props_gameplay/bottle_rejuvenation.vmdl"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+            "Model"							"models/props_gameplay/bottle_rejuvenation.vmdl"
 
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"100"
-		"AbilityCastPoint"				"0.0"
+            // Stats
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityCastRange"				"100"
+            "AbilityCastPoint"				"0.0"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"99999"
-		"ItemPurchasable"				"0"
-		"ItemShopTags"					"consumable"
-		"ItemQuality"					"consumable"
-		"ItemStackable"					"1"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"1"
-		"ItemKillable"					"0"
-		"ItemCastOnPickup"				"1"
+            // Item Info
+            //-------------------------------------------------------------------------------------------------------------
+            "ItemCost"						"99999"
+            "ItemPurchasable"				"0"
+            "ItemShopTags"					"consumable"
+            "ItemQuality"					"consumable"
+            "ItemStackable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+            "ItemPermanent"					"0"
+            "ItemInitialCharges"			"1"
+            "ItemKillable"					"0"
+            "ItemCastOnPickup"				"1"
 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"hp_restore_pct"		"40"
-			}
-		}
-	}
+            // Special
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"				"FIELD_INTEGER"
+                    "hp_restore_pct"		"40"
+                }
+            }
+        }
 
-	//=================================================================================================================
-	// Mana Potion
-	//=================================================================================================================
-	"item_mana_potion"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_lua"
-		"AbilityTextureName"			"item_mana_potion"
-		"ScriptFile"					"items/item_mana_potion"
+        //=================================================================================================================
+        // Mana Potion
+        //=================================================================================================================
+        "item_mana_potion"
+        {
+            // General
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"						"item_lua"
+            "AbilityTextureName"			"item_mana_potion"
+            "ScriptFile"					"items/item_mana_potion"
 
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"Model"							"models/props_gameplay/bottle_mango001.vmdl"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+            "Model"							"models/props_gameplay/bottle_mango001.vmdl"
 
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"100"
-		"AbilityCastPoint"				"0.0"
+            // Stats
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityCastRange"				"100"
+            "AbilityCastPoint"				"0.0"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"99999"
-		"ItemPurchasable"				"0"
-		"ItemShopTags"					"consumable"
-		"ItemQuality"					"consumable"
-		"ItemStackable"					"1"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"1"
-		"ItemKillable"					"0"
-		"ItemCastOnPickup"				"1"
+            // Item Info
+            //-------------------------------------------------------------------------------------------------------------
+            "ItemCost"						"99999"
+            "ItemPurchasable"				"0"
+            "ItemShopTags"					"consumable"
+            "ItemQuality"					"consumable"
+            "ItemStackable"					"1"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+            "ItemPermanent"					"0"
+            "ItemInitialCharges"			"1"
+            "ItemKillable"					"0"
+            "ItemCastOnPickup"				"1"
 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"mana_restore_pct"		"40"
-			}
-		}
-	}
+            // Special
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"				"FIELD_INTEGER"
+                    "mana_restore_pct"		"40"
+                }
+            }
+        }
 
 
     //=================================================================================================================
@@ -417,13 +365,13 @@
             "ItemDroppable" 				"1"
             "ItemKillable" 					"0" 
             "ItemAlertable"					"1"
-            "ItemPermanent"					"1"
+            "ItemPermanent"					"0"
             "ItemRequiresCharges"			"0"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"0"
+            "ItemCost" 						"10"
             "ItemSellable" 					"1"
-            "ItemPurchasable" 				"1"
+            "ItemPurchasable" 				"0"
             "ItemStackable" 				"0"
             "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
             "AbilitySpecial"
@@ -458,13 +406,13 @@
             "ItemDroppable" 				"1"
             "ItemKillable" 					"0" 
             "ItemAlertable"					"1"
-            "ItemPermanent"					"1"
+            "ItemPermanent"					"0"
             "ItemRequiresCharges"			"0"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"0"
+            "ItemCost" 						"10"
             "ItemSellable" 					"1"
-            "ItemPurchasable" 				"1"
+            "ItemPurchasable" 				"0"
             "ItemStackable" 				"0"
             "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
             "AbilitySpecial"
@@ -499,13 +447,13 @@
             "ItemDroppable" 				"1"
             "ItemKillable" 					"0" 
             "ItemAlertable"					"1"
-            "ItemPermanent"					"1"
+            "ItemPermanent"					"0"
             "ItemRequiresCharges"			"0"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"0"
+            "ItemCost" 						"10"
             "ItemSellable" 					"1"
-            "ItemPurchasable" 				"1"
+            "ItemPurchasable" 				"0"
             "ItemStackable" 				"0"
             "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
             "AbilitySpecial"
@@ -531,20 +479,75 @@
             }			
         }
 
+        "item_blight_orb"
+	    {
+            "BaseClass" 					"item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl" 
+            "AbilityTextureName" 			"item_blight_orb"
+            "ItemDroppable" 				"1"
+            "ItemKillable" 					"0" 
+            "ItemAlertable"					"1"
+            "ItemPermanent"					"0"
+            "ItemRequiresCharges"			"0"
+            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "ItemCost" 						"10"
+            "ItemSellable" 					"1"
+            "ItemPurchasable" 				"0"
+            "ItemStackable" 				"0"
+            "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
+            "UIPickupSound" 				"Item.DropGemShop"
+            "UIDropSound" 					"Item.DropGemShop"
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"					"FIELD_INTEGER"
+                    "armor_reduction"			"-2"
+                }
+                "02"
+                {
+                    "var_type"					"FIELD_INTEGER"
+                    "duration"					"5"
+                }
+            }
+            "Modifiers"
+            {
+                "item_blight_orb_modifier"
+                {
+                    "Passive"			"1"
+                    "IsHidden"			"1"
+                    "Attributes"		"MODIFIER_ATTRIBUTE_NONE"
+                    "OnAttackLanded"
+                    {
+                        "ApplyModifier"
+                        {
+                            "ModifierName"	"item_blight_orb_modifier_debuff"
+                            "Duration"		"%duration"
+                            "Target"		"TARGET"
+                        }
+                    }
+                }
+            
+                "item_blight_orb_modifier_debuff"
+                {
+                    "IsHidden"			"0"
+                    "IsBuff"			"0"
+                    "IsDebuff"			"1"
+                    "EffectName"		"particles/units/heroes/hero_monkey_king/monkey_king_jump_armor_debuff_model.vpcf"
+                    "EffectAttachType"	"follow_overhead"
+                    "Attributes"		"MODIFIER_ATTRIBUTE_NONE"
+                    "Properties"
+                    {
+                        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%armor_reduction"
+                    }
+                }
+		    }			
+	    }
+
 
     //=================================================================================================================
 	// RECIPES
 	//=================================================================================================================
-        "item_recipe_energy_crystal_valuable"
-        {
-            "ID"                  "5000"
-            "BaseClass"           "item_datadriven"
-            "ItemRecipe"          "1"
-            "ItemCost"            "0"
-            "ItemResult"          "item_energy_crystal_valuable"
-            "ItemRequirements"
-            {
-                "01" "item_blue_crystal_valuable;item_purple_crystal_valuable"
-            }
-        }
 }
