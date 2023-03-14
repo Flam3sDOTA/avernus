@@ -49,6 +49,10 @@ end
 function avernus:OnEntityKilled(event)
   local killed = EntIndexToHScript(event.entindex_killed)
   if not killed then return end
+
+  --if not killed:IsRealHero() then
+    --local particle = ParticleManager:CreateParticle( "particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_kill_effect_target.vpcf", PATTACH_ABSORIGIN_FOLLOW, killed)
+  --end
 end
 
 ---------------------------------------------------------------------------

@@ -81,7 +81,7 @@
             //-------------------------------------------------------------------------------------------------------------
             "BaseClass"                     "item_datadriven"
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl"
+            "Model"							"models/props_gameplay/moon_shard/moon_shard_meteor.vmdl"
             "ItemPurchasable"				"0"
             "ItemStackable"					"0"
             "ItemKillable"					"0"

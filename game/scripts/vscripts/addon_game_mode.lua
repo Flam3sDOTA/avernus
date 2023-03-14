@@ -101,7 +101,7 @@ function avernus:InitGameMode()
 	GameRules:SetStrategyTime(0)
 	GameRules:SetShowcaseTime(0)
 	GameRules:SetGoldTickTime(0)
-	GameRules:SetStartingGold(1500) -- default TBD
+	GameRules:SetStartingGold(0) -- default 0
 	GameRules:SetGoldPerTick(0)
 	GameRules:SetTimeOfDay(0.751)
 
@@ -191,6 +191,5 @@ function avernus:InitGameMode()
 	end
 
 	if IsInToolsMode() then
-		GameRules:SetStartingGold(99999)
    end
 end

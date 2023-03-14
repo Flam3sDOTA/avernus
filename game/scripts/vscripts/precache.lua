@@ -14,6 +14,7 @@ g_ModelPrecache =
 	"models/props_gameplay/bottle_rejuvenation.vmdl",
 	"models/props_gameplay/bottle_mango001.vmdl",
 	"models/props_gameplay/gold_coin_overthrow.vmdl",
+	"models/props_gameplay/moon_shard/moon_shard_meteor.vmdl",
 
 	-- Heroes
 	"models/heroes/beastmaster/beastmaster.vmdl",
@@ -35,6 +36,7 @@ g_ParticlePrecache =
 	"particles/items3_fx/mango_active.vpcf",
 
 	"particles/units/heroes/hero_monkey_king/monkey_king_jump_armor_debuff_model.vpcf",
+	"particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_kill_effect_target.vpcf",
 }
 
 g_ParticleFolderPrecache =

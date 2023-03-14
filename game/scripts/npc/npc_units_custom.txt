@@ -146,7 +146,7 @@
 					{
 						"1"				"item_energy_crystal_valuable"
 					}
-					"Chance"			"15"
+					"Chance"			"10"
 				}
 				"ValuablesRare"
 				{
@@ -296,7 +296,7 @@
 						"2"				"item_bones_valuable"
 						"3"				"item_dead_fish_valuable"
 					}
-					"Chance"			"20"
+					"Chance"			"25"
 				}
 				"ValuablesUncommon"
 				{
