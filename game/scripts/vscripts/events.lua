@@ -65,9 +65,10 @@ function avernus:OnGameRulesStateChange()
   elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 	  Convars:SetInt("dota_max_physical_items_purchase_limit", 9999)
     Convars:SetInt("dota_max_physical_items_drop_limit", 9999)
-    Timers:CreateTimer(1, function()
+    Timers:CreateTimer(0.5, function()
       InitializeCrates()
       InitializeVases()
+      InitializeMiniBosses()
     end)
   end
 end
@@ -96,4 +97,9 @@ function InitializeVases()
     local vasespawnpoint = Entities:FindByName(nil, "VasesSpawnPoint" .. i):GetAbsOrigin()
     local vase = CreateUnitByName("npc_dota_vase_custom", vasespawnpoint, true, nil, nil, DOTA_TEAM_NEUTRALS)
   end
+end
+
+function InitializeMiniBosses()
+  local minibossogrespawnlocation = Entities:FindByName(nil, "miniboss_spawn_location1"):GetAbsOrigin()
+  local miniboss_ogre = CreateUnitByName("miniboss_ogre", minibossogrespawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
 end

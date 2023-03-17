@@ -69,8 +69,8 @@
 		"AttributeBaseAgility"			"1"
 		"AttributeAgilityGain"			"1"
         
-        "VisionDaytimeRange"        	"1000"
-        "VisionNighttimeRange"        	"1000"
+        "VisionDaytimeRange"        	"1350"
+        "VisionNighttimeRange"        	"1350"
 
         "HasInventory"                	"1"
         "IsNeutralUnitType"				"0"
@@ -148,8 +148,8 @@
 		"AttributeBaseAgility"			"5"
 		"AttributeAgilityGain"			"2"
         
-        "VisionDaytimeRange"        	"1000"
-        "VisionNighttimeRange"        	"1000"
+        "VisionDaytimeRange"        	"1350"
+        "VisionNighttimeRange"        	"1350"
 
         "HasInventory"                	"1"
         "IsNeutralUnitType"				"0"
@@ -227,8 +227,8 @@
 		"AttributeBaseAgility"			"1"
 		"AttributeAgilityGain"			"1"
         
-        "VisionDaytimeRange"        	"1000"
-        "VisionNighttimeRange"        	"1000"
+        "VisionDaytimeRange"        	"1350"
+        "VisionNighttimeRange"        	"1350"
 
         "HasInventory"                	"1"
         "IsNeutralUnitType"				"0"

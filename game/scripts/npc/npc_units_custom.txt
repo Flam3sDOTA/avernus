@@ -318,4 +318,118 @@
 		}
 	}
 
+	//=================================================================================
+	// Mini Boss: Ogre
+	//=================================================================================
+	"miniboss_ogre"
+	{
+		"vscripts"					"ai/ai_miniboss_ogre.lua"
+
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/ogre_1/boss_ogre.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Ogre"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"1"
+		"ModelScale" 				"2.1"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"400"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"ogre_tank_boss_melee_smash"
+		"Ability2"					"ogre_tank_boss_jump_smash"
+		"Ability3"					""
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"
+		"AttackDamageMax"			"1"
+		"AttackRate"				"2.8"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"1200"
+		"AttackRange"				"350"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		"RingRadius"				"115"
+		"HealthBarOffset"			"365"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"500"
+		"BountyGoldMin"				"500"
+		"BountyGoldMax"				"550"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"210"
+		"MovementTurnRate"			"0.2"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2500"
+		"StatusHealthRegen"			"2"
+		"StatusMana"				"1000"
+		"StatusManaRegen"			"1"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"700"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			//Basic AI State
+			//------------------------------------------------------------
+			"DefaultState"				"Invade"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}	
+			"ItemDrops"
+			{
+				"Trinkets"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"100"
+				}
+			}
+		}
+	}
 }

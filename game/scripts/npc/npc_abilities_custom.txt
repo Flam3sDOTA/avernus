@@ -88,4 +88,119 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+    // Ability: Ogre Tank Boss Melee Smash
+    //=================================================================================================================
+    "ogre_tank_boss_melee_smash"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "lua_abilities/ogre_tank_boss_melee_smash"
+        "AbilityTextureName"            "centaur_double_edge"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "IsOnCastBar"                   "0"        
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "583"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        "AnimationPlaybackRate"         "1.0"
+        "AnimationIgnoresModelScale"    "1"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "3"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "impact_radius"         "245"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "stun_duration"         "1.0"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage"                "100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "base_swing_speed"      "1.0"
+            }
+        }
+    }
+
+     //=================================================================================================================
+    // Ability: Ogre Tank Boss Jump Smash
+    //=================================================================================================================
+    "ogre_tank_boss_jump_smash"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "lua_abilities/ogre_tank_boss_jump_smash"
+        "AbilityTextureName"            "centaur_double_edge"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "IsOnCastBar"                   "0"
+                
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "150"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+        "AnimationIgnoresModelScale"    "1"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "3.5"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "impact_radius"         "245"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "stun_duration"         "2.0"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage"                "125"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "jump_speed"            "1.5"
+            }
+        }
+    }
 }

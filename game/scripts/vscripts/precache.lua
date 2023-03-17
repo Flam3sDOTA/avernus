@@ -1,5 +1,8 @@
 g_ItemPrecache =
 {
+	"item_bag_of_gold",
+	"item_health_potion",
+	"item_mana_potion",
 }
 
 g_ModelPrecache =
@@ -37,6 +40,8 @@ g_ParticlePrecache =
 
 	"particles/units/heroes/hero_monkey_king/monkey_king_jump_armor_debuff_model.vpcf",
 	"particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_kill_effect_target.vpcf",
+	"particles/test_particle/ogre_melee_smash.vpcf",
+	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
 }
 
 g_ParticleFolderPrecache =
@@ -56,6 +61,8 @@ g_SoundPrecache =
 	"soundevents/game_sounds_dungeon.vsndevts",
 	"soundevents/game_sounds_dungeon_enemies.vsndevts",
 	"soundevents/game_sounds_creeps.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts", -- assault_captain
+	"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts", -- assault_captain
 	
 	-- Hero Sounds
 	"soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts",
@@ -66,6 +73,8 @@ g_SoundPrecache =
 	"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts",
 	"soundevents/voscripts/game_sounds_vo_invoker.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts",
+	"soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts",
 
 	-- Abilities
 	"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts",
