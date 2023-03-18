@@ -420,12 +420,28 @@
 			}	
 			"ItemDrops"
 			{
-				"Trinkets"
+				"Valuables"
 				{
 					"Item"
 					{
 						"1"				"item_midas_coin_valuable"
 						"2"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"100"
+				}
+				"Keys"
+				{
+					"Item"
+					{
+						"1"				"item_iron_gate_key"
+					}
+					"Chance"			"100"
+				}
+				"Treasures"
+				{
+					"Item"
+					{
+						"1"				"item_chest_normal"
 					}
 					"Chance"			"100"
 				}

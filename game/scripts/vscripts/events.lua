@@ -69,6 +69,7 @@ function avernus:OnGameRulesStateChange()
       InitializeCrates()
       InitializeVases()
       InitializeMiniBosses()
+      InitializeGivingTree()
     end)
   end
 end
@@ -102,4 +103,23 @@ end
 function InitializeMiniBosses()
   local minibossogrespawnlocation = Entities:FindByName(nil, "miniboss_spawn_location1"):GetAbsOrigin()
   local miniboss_ogre = CreateUnitByName("miniboss_ogre", minibossogrespawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
+end
+
+function InitializeGivingTree()
+  local GivingTreeRareLootSpawnLocation1 = Entities:FindByName(nil, "giving_tree1"):GetAbsOrigin()
+  local GivingTreeRareLootSpawnLocation2 = Entities:FindByName(nil, "giving_tree2"):GetAbsOrigin()
+  local CommonChance = 50
+  local RareChance = 10
+
+  if RollPercentage(CommonChance) then
+    local itemcommon = CreateItem("item_energy_crystal_valuable", nil, nil)
+    local poscommon = GivingTreeRareLootSpawnLocation1
+    local spawncommon = CreateItemOnPositionSync( poscommon, itemcommon )
+  end
+
+  if RollPercentage(RareChance) then
+    local itemrare = CreateItem("item_midas_coin_valuable", nil, nil)
+    local posrare = GivingTreeRareLootSpawnLocation2
+    local spawnrare = CreateItemOnPositionSync( posrare, itemrare )
+  end
 end
