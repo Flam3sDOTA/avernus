@@ -41,7 +41,11 @@ g_ParticlePrecache =
 	"particles/units/heroes/hero_monkey_king/monkey_king_jump_armor_debuff_model.vpcf",
 	"particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_kill_effect_target.vpcf",
 	"particles/test_particle/ogre_melee_smash.vpcf",
-	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf",
+	"particles/creep_effects/overhead_boss.vpcf",
+	"particles/creep_effects/overhead_bonus.vpcf",
+	"particles/creep_effects/overhead_normal.vpcf",
+
 }
 
 g_ParticleFolderPrecache =

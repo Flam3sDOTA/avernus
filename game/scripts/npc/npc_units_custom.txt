@@ -349,7 +349,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"
+		"ArmorPhysical"				"10"
 		"MagicalResistance"			"0"
 		
 		// Attack
@@ -384,8 +384,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2500"
-		"StatusHealthRegen"			"2"
+		"StatusHealth"				"3000"
+		"StatusHealthRegen"			"3"
 		"StatusMana"				"1000"
 		"StatusManaRegen"			"1"
 		
@@ -420,6 +420,147 @@
 			}	
 			"ItemDrops"
 			{
+				"Valuables"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"100"
+				}
+				"Keys"
+				{
+					"Item"
+					{
+						"1"				"item_iron_gate_key"
+					}
+					"Chance"			"100"
+				}
+				"Treasures"
+				{
+					"Item"
+					{
+						"1"				"item_chest_normal"
+					}
+					"Chance"			"100"
+				}
+			}
+		}
+	}
+
+
+	//=================================================================================
+	// Mini Boss: Omni
+	//=================================================================================
+	"miniboss_omni"
+	{
+		//"vscripts"					"ai/ai_miniboss_ogre.lua"
+
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/omniknight_golem/omniknight_golem.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Ogre"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"1"
+		"ModelScale" 				"2.3072"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		"MinimapIcon"				"minimap_enemyicon"
+		"MinimapIconSize"			"400"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"
+		"MagicalResistance"			"0"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"100"
+		"AttackDamageMax"			"100"
+		"AttackRate"				"2.8"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"1200"
+		"AttackRange"				"1"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		"RingRadius"				"100"
+		"HealthBarOffset"			"500"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"500"
+		"BountyGoldMin"				"500"
+		"BountyGoldMax"				"550"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"260"
+		"MovementTurnRate"			"0.2"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"
+		"StatusHealthRegen"			"3"
+		"StatusMana"				"1000"
+		"StatusManaRegen"			"1"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"700"
+		"VisionNighttimeRange"		"700"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			//Basic AI State
+			//------------------------------------------------------------
+			"DefaultState"				"Invade"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}	
+			"ItemDrops"
+			{
+				"Consumables"
+				{
+					"Item"
+					{
+						"1"				"item_health_potion"
+						"2"				"item_mana_potion"
+					}
+					"Chance"			"15"
+				}
 				"Valuables"
 				{
 					"Item"

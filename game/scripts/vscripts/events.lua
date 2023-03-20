@@ -103,6 +103,19 @@ end
 function InitializeMiniBosses()
   local minibossogrespawnlocation = Entities:FindByName(nil, "miniboss_spawn_location1"):GetAbsOrigin()
   local miniboss_ogre = CreateUnitByName("miniboss_ogre", minibossogrespawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
+
+  local minibossomnispawnlocation = Entities:FindByName(nil, "miniboss_spawn_location2"):GetAbsOrigin()
+  local miniboss_omni = CreateUnitByName("miniboss_omni", minibossomnispawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
+
+  miniboss_omni:SetAngles(0, 180, 0)
+
+  local particleminibossogre = ParticleManager:CreateParticle( "particles/creep_effects/overhead_boss.vpcf", PATTACH_OVERHEAD_FOLLOW, miniboss_ogre)
+  ParticleManager:SetParticleControl(particleminiboss, 0, miniboss_ogre:GetOrigin())
+	ParticleManager:SetParticleControl(particleminiboss, 3, miniboss_ogre:GetOrigin())
+
+  local particleminibossomni = ParticleManager:CreateParticle( "particles/creep_effects/overhead_boss.vpcf", PATTACH_OVERHEAD_FOLLOW, miniboss_omni)
+  ParticleManager:SetParticleControl(particleminiboss, 0, miniboss_omni:GetOrigin())
+	ParticleManager:SetParticleControl(particleminiboss, 3, miniboss_omni:GetOrigin())
 end
 
 function InitializeGivingTree()
