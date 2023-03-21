@@ -32,12 +32,10 @@ g_ParticlePrecache =
 {
 	"particles/units/heroes/hero_drow/drow_base_attack.vpcf",
 	"particles/units/heroes/hero_invoker/invoker_base_attack.vpcf",
-
 	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf",
 	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf",
 	"particles/items3_fx/fish_bones_active.vpcf",
 	"particles/items3_fx/mango_active.vpcf",
-
 	"particles/units/heroes/hero_monkey_king/monkey_king_jump_armor_debuff_model.vpcf",
 	"particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_kill_effect_target.vpcf",
 	"particles/test_particle/ogre_melee_smash.vpcf",
@@ -45,7 +43,12 @@ g_ParticlePrecache =
 	"particles/creep_effects/overhead_boss.vpcf",
 	"particles/creep_effects/overhead_bonus.vpcf",
 	"particles/creep_effects/overhead_normal.vpcf",
-
+	"particles/units/heroes/hero_lycan/lycan_summon_wolves_spawn.vpcf",
+	"particles/units/heroes/hero_lycan/lycan_summon_wolves_cast.vpcf",
+	"particles/units/heroes/hero_ember_spirit/ember_spirit_fire_remnant_trail.vpcf",
+	"particles/units/heroes/hero_bloodseeker/bloodseeker_thirst_owner.vpcf",
+	"particles/units/heroes/hero_ursa/ursa_overpower_buff.vpcf",
+	"particles/dev/library/base_dust_hit.vpcf",
 }
 
 g_ParticleFolderPrecache =
@@ -65,8 +68,10 @@ g_SoundPrecache =
 	"soundevents/game_sounds_dungeon.vsndevts",
 	"soundevents/game_sounds_dungeon_enemies.vsndevts",
 	"soundevents/game_sounds_creeps.vsndevts",
-	"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts", -- assault_captain
-	"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts", -- assault_captain
+
+	-- Units
+	"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts",
 	
 	-- Hero Sounds
 	"soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts",
@@ -79,6 +84,8 @@ g_SoundPrecache =
 	"soundevents/voscripts/game_sounds_vo_invoker.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts",
 	"soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts",
+	"soundevents/voscripts/game_sounds_vo_lycan.vsndevts",
 
 	-- Abilities
 	"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts",

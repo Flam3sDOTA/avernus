@@ -93,6 +93,50 @@
         }
 
         //=======================================
+        // Paw of Lucius - Valuable
+        //=======================================
+        "item_paw_of_lucius_valuable"
+        {
+            "AbilityTextureName" 			"item_paw_of_lucius_valuable"
+            "ItemCost"						"250"
+            "ItemShopTags"					"epic"
+            "ItemQuality"					"epic"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Bogdugg's Cudgel
+        //=======================================
+        "item_bogduggs_cudgel_valuable"
+        {
+            "AbilityTextureName" 			"item_bogduggs_cudgel_valuable"
+            "ItemCost"						"250"
+            "ItemShopTags"					"epic"
+            "ItemQuality"					"epic"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
         // Midas Coin - Valuable
         //=======================================
         "item_midas_coin_valuable"
@@ -100,8 +144,8 @@
             "AbilityTextureName" 			"item_midas_coin_valuable"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
             "ItemCost"						"250"
-            "ItemShopTags"					"component"
-            "ItemQuality"					"component"
+            "ItemShopTags"					"epic"
+            "ItemQuality"					"epic"
             //-------------------------------------------------------------------------------------------------------------
             "BaseClass"                     "item_datadriven"
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -660,7 +704,9 @@
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
             "Model"							"models/gameplay/prison_key.vmdl"
             "ItemPurchasable"				"0"
-            "ItemStackable"					"0"
+            "ItemStackable"					"1"
+            "ItemInitialCharges"			"1"
+		    "ItemDisplayCharges"			"1"
             "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"

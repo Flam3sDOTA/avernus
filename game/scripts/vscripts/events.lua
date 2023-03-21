@@ -70,6 +70,7 @@ function avernus:OnGameRulesStateChange()
       InitializeVases()
       InitializeMiniBosses()
       InitializeGivingTree()
+      InitializeLockedDoors()
     end)
   end
 end
@@ -105,17 +106,16 @@ function InitializeMiniBosses()
   local miniboss_ogre = CreateUnitByName("miniboss_ogre", minibossogrespawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
 
   local minibossomnispawnlocation = Entities:FindByName(nil, "miniboss_spawn_location2"):GetAbsOrigin()
-  local miniboss_omni = CreateUnitByName("miniboss_omni", minibossomnispawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
-
-  miniboss_omni:SetAngles(0, 180, 0)
+  local miniboss_werewolf = CreateUnitByName("miniboss_werewolf", minibossomnispawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
+  miniboss_werewolf:SetAngles(0, 180, 0)
 
   local particleminibossogre = ParticleManager:CreateParticle( "particles/creep_effects/overhead_boss.vpcf", PATTACH_OVERHEAD_FOLLOW, miniboss_ogre)
-  ParticleManager:SetParticleControl(particleminiboss, 0, miniboss_ogre:GetOrigin())
-	ParticleManager:SetParticleControl(particleminiboss, 3, miniboss_ogre:GetOrigin())
+  ParticleManager:SetParticleControl(particleminibossogre, 0, miniboss_ogre:GetOrigin())
+	ParticleManager:SetParticleControl(particleminibossogre, 3, miniboss_ogre:GetOrigin())
 
-  local particleminibossomni = ParticleManager:CreateParticle( "particles/creep_effects/overhead_boss.vpcf", PATTACH_OVERHEAD_FOLLOW, miniboss_omni)
-  ParticleManager:SetParticleControl(particleminiboss, 0, miniboss_omni:GetOrigin())
-	ParticleManager:SetParticleControl(particleminiboss, 3, miniboss_omni:GetOrigin())
+  local particleminibosswerewolf = ParticleManager:CreateParticle( "particles/creep_effects/overhead_boss.vpcf", PATTACH_OVERHEAD_FOLLOW, miniboss_werewolf)
+  ParticleManager:SetParticleControl(particleminibosswerewolf, 0, miniboss_werewolf:GetOrigin())
+	ParticleManager:SetParticleControl(particleminibosswerewolf, 3, miniboss_werewolf:GetOrigin())
 end
 
 function InitializeGivingTree()
@@ -135,4 +135,12 @@ function InitializeGivingTree()
     local posrare = GivingTreeRareLootSpawnLocation2
     local spawnrare = CreateItemOnPositionSync( posrare, itemrare )
   end
+end
+
+function InitializeLockedDoors()
+  local Gate1SpawnLocation = Entities:FindByName(nil, "gate1spawnlocation"):GetAbsOrigin()
+  local Gate1 = CreateUnitByName("npc_dota_gate_1", Gate1SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+  Gate1:AddNewModifier( Gate1, nil, "modifier_destructible_gate", { duration = -1 } )
+  Gate1:SetAngles(0, 70, 0)
+
 end

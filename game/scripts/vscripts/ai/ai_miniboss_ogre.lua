@@ -25,7 +25,7 @@ function MiniBossOgreThink()
 	end
 
 	local fDist = ( thisEntity:GetOrigin() - thisEntity.vInitialSpawnPos ):Length2D()
-	if fDist > 1500 then
+	if fDist > 1800 then
 		RetreatSpawnPosition()
 		return 2.0
 	end

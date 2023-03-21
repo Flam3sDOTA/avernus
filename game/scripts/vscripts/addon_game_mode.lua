@@ -10,6 +10,9 @@ require("libraries/utility_functions")
 require("events")
 require("precache")
 
+LinkLuaModifier( "modifier_destructible_gate",	"lua_abilities/modifiers/modifier_destructible_gate",	LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_destructible_gate_anim",	"lua_abilities/modifiers/modifier_destructible_gate_anim",	LUA_MODIFIER_MOTION_NONE )
+
 function Precache( context )
 	for _,Item in pairs( g_ItemPrecache ) do
     	PrecacheItemByNameSync( Item, context )

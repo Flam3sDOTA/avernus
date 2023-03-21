@@ -338,7 +338,7 @@
 		"IsBossMonster"				"1"
 
 		"MinimapIcon"				"minimap_roshancamp"
-		"MinimapIconSize"			"400"
+		"MinimapIconSize"			"350"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -420,12 +420,28 @@
 			}	
 			"ItemDrops"
 			{
+				"Consumables"
+				{
+					"Item"
+					{
+						"1"				"item_health_potion"
+						"2"				"item_mana_potion"
+					}
+					"Chance"			"50"
+				}
 				"Valuables"
 				{
 					"Item"
 					{
 						"1"				"item_midas_coin_valuable"
-						"2"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"10"
+				}
+				"ValuablesSpecialItem"
+				{
+					"Item"
+					{
+						"1"				"item_bogduggs_cudgel_valuable"
 					}
 					"Chance"			"100"
 				}
@@ -443,7 +459,15 @@
 					{
 						"1"				"item_chest_normal"
 					}
-					"Chance"			"100"
+					"Chance"			"60"
+				}
+				"GoldenTreasures"
+				{
+					"Item"
+					{
+						"1"				"item_chest_golden"
+					}
+					"Chance"			"1"
 				}
 			}
 		}
@@ -451,31 +475,32 @@
 
 
 	//=================================================================================
-	// Mini Boss: Omni
+	// Mini Boss: Werewolf
 	//=================================================================================
-	"miniboss_omni"
+	"miniboss_werewolf"
 	{
-		//"vscripts"					"ai/ai_miniboss_ogre.lua"
+		"vscripts"					"ai/ai_miniboss_werewolf.lua"
 
 		// General
 		//----------------------------------------------------------------
-		"Model"						"models/creeps/omniknight_golem/omniknight_golem.vmdl"
+		"Model"						"models/creeps/knoll_1/werewolf_boss.vmdl"
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"Hero_Ogre"
-		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"SoundSet"					"Hero_Lycan"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"
+		"VoiceFile"					"soundevents/voscripts/game_sounds_vo_lycan.vsndevts"
 		"Level"						"1"
-		"ModelScale" 				"2.3072"
+		"ModelScale" 				"1.7"
 		"ConsideredHero"			"1"
 		"IsAncient"					"1"
 		"IsBossMonster"				"1"
 
-		"MinimapIcon"				"minimap_enemyicon"
-		"MinimapIconSize"			"400"
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"350"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"werewolf_summon_wolves"
+		"Ability2"					"ursa_overpower_lua"
 		"Ability3"					""
 		"Ability4"					""
 
@@ -486,21 +511,21 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		"AttackDamageMin"			"100"
-		"AttackDamageMax"			"100"
-		"AttackRate"				"2.8"
-		"AttackAnimationPoint"		"0.3"
-		"AttackAcquisitionRange"	"1200"
-		"AttackRange"				"1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"50"
+		"AttackDamageMax"			"55"
+		"AttackRate"				"1.7"
+		"AttackAnimationPoint"		"0.43"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"128"
 		"ProjectileModel"			""
 		"ProjectileSpeed"			"0"
 
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
-		"RingRadius"				"100"
-		"HealthBarOffset"			"500"
+		"RingRadius"				"70"
+		"HealthBarOffset"			"235"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -511,7 +536,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"260"
+		"MovementSpeed"				"285"
 		"MovementTurnRate"			"0.2"
 
 		// Status
@@ -523,8 +548,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"700"
-		"VisionNighttimeRange"		"700"
+		"VisionDaytimeRange"		"1100"
+		"VisionNighttimeRange"		"1100"
 
 		// Team
 		//----------------------------------------------------------------
@@ -559,14 +584,21 @@
 						"1"				"item_health_potion"
 						"2"				"item_mana_potion"
 					}
-					"Chance"			"15"
+					"Chance"			"50"
 				}
 				"Valuables"
 				{
 					"Item"
 					{
 						"1"				"item_midas_coin_valuable"
-						"2"				"item_energy_crystal_valuable"
+					}
+					"Chance"			"10"
+				}
+				"ValuablesSpecialItem"
+				{
+					"Item"
+					{
+						"1"				"item_paw_of_lucius_valuable"
 					}
 					"Chance"			"100"
 				}
@@ -584,9 +616,246 @@
 					{
 						"1"				"item_chest_normal"
 					}
-					"Chance"			"100"
+					"Chance"			"60"
+				}
+				"GoldenTreasures"
+				{
+					"Item"
+					{
+						"1"				"item_chest_golden"
+					}
+					"Chance"			"1"
 				}
 			}
 		}
+	}
+
+	//=================================================================================
+	// Creature: Dire Hound
+	//=================================================================================
+	"npc_dota_creature_dire_hound"
+	{
+		// Script
+
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/items/lycan/wolves/alpha_summon_01/alpha_summon_01.vmdl"
+		"SoundSet"					"DireHound"
+		"Level"						"1"
+		"ModelScale" 				"1"
+		"IsNeutralUnitType"			"1"
+		"vscripts"					"ai/ai_miniboss_direhound.lua"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"55"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"35"
+		"AttackDamageMax"			"40"
+		"AttackRate"				"1.45"
+		"AttackAnimationPoint"		"0.33"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"45"
+		"HealthBarOffset"			"90"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"20"
+		"BountyGoldMin"				"11"
+		"BountyGoldMax"				"15"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"310"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"45"
+		"StatusHealthRegen"			"0.5"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"1"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1300"
+		"VisionNighttimeRange"		"1300"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"PathfindingSearchDepthScale"		"0.1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DefaultState"				"Invade"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}
+			"ItemDrops"
+			{
+				"Consumables"
+				{
+					"Item"
+					{
+						"1"  			"item_health_potion"
+						"2"				"item_health_potion"
+						"3"				"item_mana_potion"
+						"4"				"item_mana_potion"
+					}
+					"Chance"			"12"
+				}
+				"StatTomes"
+				{
+					"Item"
+					{
+						"1"  			"item_book_of_strength"
+						"2"				"item_book_of_agility"
+						"3"				"item_book_of_intelligence"
+					}
+					"Chance"			"1"
+				}
+				"Valuables"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_paw_of_lucius_valuable"
+					}
+					"Chance"			"1"
+				}
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 1
+	//=================================================================================================================
+	"npc_dota_gate_1"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_locked_01.vmdl"
+		"ModelScale"				"0.8"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 1: Destruction Anim
+	//=================================================================================================================
+	"npc_dota_gate_1_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_destruction.vmdl"
+		"ModelScale"				"0.8"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	}
 }
