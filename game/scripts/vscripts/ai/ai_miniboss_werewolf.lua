@@ -32,6 +32,8 @@ function MiniBossWerewolfThink()
 				AbilityIndex = nil,
 				TargetIndex = enemies[1]:entindex(),
 			})
+		else
+			RetreatSpawnPosition()
 		end
 	end
 

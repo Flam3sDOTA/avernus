@@ -18,6 +18,9 @@ end
 -- Event: OnHeroInGame
 ---------------------------------------------------------------------------
 function avernus:OnHeroInGame(hero)
+  for i=1,3 do
+    hero:AddItemByName("item_ward_observer")
+  end
 end
 
 ---------------------------------------------------------------------------
@@ -70,7 +73,7 @@ function avernus:OnGameRulesStateChange()
       InitializeVases()
       InitializeMiniBosses()
       InitializeGivingTree()
-      InitializeLockedDoors()
+      InitializeLockedGates()
     end)
   end
 end
@@ -105,8 +108,8 @@ function InitializeMiniBosses()
   local minibossogrespawnlocation = Entities:FindByName(nil, "miniboss_spawn_location1"):GetAbsOrigin()
   local miniboss_ogre = CreateUnitByName("miniboss_ogre", minibossogrespawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
 
-  local minibossomnispawnlocation = Entities:FindByName(nil, "miniboss_spawn_location2"):GetAbsOrigin()
-  local miniboss_werewolf = CreateUnitByName("miniboss_werewolf", minibossomnispawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
+  local minibosswerewolfspawnlocation = Entities:FindByName(nil, "miniboss_spawn_location2"):GetAbsOrigin()
+  local miniboss_werewolf = CreateUnitByName("miniboss_werewolf", minibosswerewolfspawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
   miniboss_werewolf:SetAngles(0, 180, 0)
 
   local particleminibossogre = ParticleManager:CreateParticle( "particles/creep_effects/overhead_boss.vpcf", PATTACH_OVERHEAD_FOLLOW, miniboss_ogre)
@@ -137,7 +140,7 @@ function InitializeGivingTree()
   end
 end
 
-function InitializeLockedDoors()
+function InitializeLockedGates()
   local Gate1SpawnLocation = Entities:FindByName(nil, "gate1spawnlocation"):GetAbsOrigin()
   local Gate1 = CreateUnitByName("npc_dota_gate_1", Gate1SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
   Gate1:AddNewModifier( Gate1, nil, "modifier_destructible_gate", { duration = -1 } )
