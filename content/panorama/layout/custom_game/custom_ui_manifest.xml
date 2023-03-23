@@ -11,7 +11,7 @@
 		var NoTopLeftMenuButtons = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("MenuButtons");
 		var NoTPScrollUI = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("center_with_stats").FindChildTraverse("center_block");
 		var NoCourierControl = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("shop_launcher_block").FindChildTraverse("quickbuy").FindChildTraverse("ShopCourierControls");
-		var NoRightFlair = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("center_with_stats").FindChildTraverse("center_block");
+		var NoRightFlair = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("center_with_stats").FindChildTraverse("center_block").FindChildTraverse("inventory_neutral_slot_container");
 		var NoCommonItems = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("shop").FindChildTraverse("Main").FindChildTraverse("ItemCombinesAndBasicItemsContainer");
 		var NoCourierControl2 = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("shop_launcher_block").FindChildTraverse("quickbuy");
 		var NoAllNeutralItemsButton = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("shop").FindChildTraverse("Main").FindChildTraverse("HeightLimiter").FindChildTraverse("GridMainShop").FindChildTraverse("GridMainShopContents").FindChildTraverse("GridNeutralsCategory");
@@ -23,8 +23,9 @@
 		NoTPScrollUI.FindChildTraverse("inventory_tpscroll_container").style.visibility = "collapse";
 		NoCourierControl.FindChildTraverse("courier").style.visibility = "collapse";
 		NoCourierControl2.FindChildTraverse("QuickBuyRows").style.visibility = "collapse";
-		NoRightFlair.FindChildTraverse("right_flare").style.visibility = "collapse";
-		NoRightFlair.FindChildTraverse("inventory_neutral_slot_container").style.visibility = "collapse";
+		NoRightFlair.FindChildTraverse("inventory_neutral_slot").style.borderRadius = "0px";
+		NoRightFlair.FindChildTraverse("inventory_neutral_slot").style.height = "85%";
+		NoRightFlair.FindChildTraverse("inventory_neutral_slot").style.padding = "1px";
 		NoCommonItems.FindChildTraverse("CommonItems").style.visibility = "collapse";
 		NoAllNeutralItemsButton.FindChildTraverse("ViewAllButton").style.visibility = "collapse";
 

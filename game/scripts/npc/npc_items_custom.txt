@@ -23,6 +23,7 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
             "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
         }
 
         //=======================================
@@ -45,6 +46,7 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
             "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
         }
 
         //=======================================
@@ -67,6 +69,7 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
             "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
         }
 
         //=======================================
@@ -112,6 +115,7 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
             "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
         }
 
         //=======================================
@@ -134,6 +138,7 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
             "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
         }
 
         //=======================================
@@ -191,6 +196,7 @@
             "ItemInitialCharges"			"1"
             "ItemDisplayCharges"			"1"
             "ItemCastOnPickup"				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
 
 
             // Special	
@@ -233,6 +239,7 @@
             "ItemInitialCharges"			"1"
             "ItemDisplayCharges"			"1"
             "ItemCastOnPickup"				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
 
             // Special	
             //-------------------------------------------------------------------------------------------------------------
@@ -272,6 +279,7 @@
             "ItemInitialCharges"			"1"
             "ItemDisplayCharges"			"1"
             "ItemCastOnPickup"				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
 
 
             // Special	
@@ -316,6 +324,7 @@
             "ItemPermanent"					"0"
             "ItemInitialCharges"			"1"
             "ItemKillable"					"0"
+            "DisplayOverheadAlertOnReceived"    "0"
         }
 
         //=======================================
@@ -351,6 +360,7 @@
             "ItemInitialCharges"			"1"
             "ItemKillable"					"0"
             "ItemCastOnPickup"				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
 
             // Special
             //-------------------------------------------------------------------------------------------------------------
@@ -397,6 +407,7 @@
             "ItemInitialCharges"			"1"
             "ItemKillable"					"0"
             "ItemCastOnPickup"				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
 
             // Special
             //-------------------------------------------------------------------------------------------------------------
@@ -712,6 +723,101 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "0"
             "ItemDroppable" 				"1"
+        }
+
+//=================================================================================================================
+// CLASS PASSIVE ITEMS
+//=================================================================================================================
+        //=======================================
+        // Barbarian: Thick Skinned
+        //=======================================
+        "item_barbarian_thick_skinned"
+        { 
+            "BaseClass" 					"item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl" 
+            "AbilityTextureName" 			"item_barbarian_thick_skinned"
+            "ItemDroppable" 				"0"
+            "ItemKillable" 					"0" 
+            "ItemAlertable"					"0"
+            "ItemPermanent"					"0"
+            "ItemRequiresCharges"			"0"
+            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "ItemCost" 						"0"
+            "ItemSellable" 					"0"
+            "ItemPurchasable" 				"0"
+            "ItemStackable" 				"0"
+            "ItemShareability" 				"ITEM_NOT_SHAREABLE"
+            "ItemIsNeutralDrop"				"1"	
+            "DisplayOverheadAlertOnReceived"    "0"
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"				"FIELD_INTEGER"
+                    "bonus_armor"		    "10"
+                }
+            }
+            "Modifiers"
+            {
+                "item_barbarian_thick_skinned_modifier"
+                {
+                    "Passive" 				"1" 
+                    "IsHidden" 				"1"
+                    "Attributes" 			"MODIFIER_ATTRIBUTE_NONE"
+                    "Properties"
+                    {
+                        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+                    }
+                }
+            }			
+        }
+
+         //=======================================
+        // Ranger: Marksmanship
+        //=======================================
+        "item_ranger_marksmanship"
+        { 
+            "BaseClass" 					"item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/red_box.vmdl" 
+            "AbilityTextureName" 			"item_ranger_marksmanship"
+            "ItemDroppable" 				"0"
+            "ItemKillable" 					"0" 
+            "ItemAlertable"					"0"
+            "ItemPermanent"					"0"
+            "ItemRequiresCharges"			"0"
+            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "ItemCost" 						"0"
+            "ItemSellable" 					"0"
+            "ItemPurchasable" 				"0"
+            "ItemStackable" 				"0"
+            "ItemShareability" 				"ITEM_NOT_SHAREABLE"
+            "ItemIsNeutralDrop"				"1"	
+            "DisplayOverheadAlertOnReceived"    "0"
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"				"FIELD_INTEGER"
+                    "bonus_agility"		    "10"
+                }
+            }
+            "Modifiers"
+            {
+                "item_ranger_marksmanship_modifier"
+                {
+                    "Passive" 				"1" 
+                    "IsHidden" 				"1"
+                    "Attributes" 			"MODIFIER_ATTRIBUTE_NONE"
+                    "Properties"
+                    {
+                        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agility"
+                    }
+                }
+            }			
         }
 
 //=================================================================================================================
