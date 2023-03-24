@@ -18,9 +18,23 @@ end
 -- Event: OnHeroInGame
 ---------------------------------------------------------------------------
 function avernus:OnHeroInGame(hero)
+
   for i=1,3 do
     hero:AddItemByName("item_ward_observer")
   end
+
+  if hero:GetUnitName() == "npc_dota_hero_beastmaster" then
+    hero:AddItemByName("item_barbarian_thick_skinned")
+  end
+  
+  if hero:GetUnitName() == "npc_dota_hero_drow_ranger" then
+    hero:AddItemByName("item_ranger_marksmanship")
+  end
+
+  if hero:GetUnitName() == "npc_dota_hero_invoker" then
+    hero:AddItemByName("item_mage_perfectionist")
+  end
+
 end
 
 ---------------------------------------------------------------------------

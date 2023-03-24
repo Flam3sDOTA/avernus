@@ -506,7 +506,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"10"
+		"ArmorPhysical"				"15"
 		"MagicalResistance"			"0"
 		
 		// Attack
@@ -536,7 +536,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"285"
+		"MovementSpeed"				"300"
 		"MovementTurnRate"			"0.2"
 
 		// Status
