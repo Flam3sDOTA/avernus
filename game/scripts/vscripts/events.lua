@@ -35,6 +35,10 @@ function avernus:OnHeroInGame(hero)
     hero:AddItemByName("item_mage_perfectionist")
   end
 
+  if hero:GetUnitName() == "npc_dota_hero_muerta" then
+    hero:AddItemByName("item_gunslinger_sharpshooter")
+  end
+
 end
 
 ---------------------------------------------------------------------------

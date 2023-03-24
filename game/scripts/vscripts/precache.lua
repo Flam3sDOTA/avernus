@@ -23,6 +23,7 @@ g_ModelPrecache =
 	"models/heroes/beastmaster/beastmaster.vmdl",
 	"models/heroes/drow/drow_base.vmdl",
 	"models/heroes/invoker/invoker.vmdl",
+	"models/heroes/muerta/muerta_base.vmdl",
 
 	"models/props_gameplay/treasure_chest_gold.vmdl",
 	"models/props_gameplay/treasure_chest001.vmdl",
@@ -32,6 +33,7 @@ g_ParticlePrecache =
 {
 	"particles/units/heroes/hero_drow/drow_base_attack.vpcf",
 	"particles/units/heroes/hero_invoker/invoker_base_attack.vpcf",
+	"particles/units/heroes/hero_muerta/muerta_base_attack.vpcf",
 	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf",
 	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf",
 	"particles/items3_fx/fish_bones_active.vpcf",
@@ -82,6 +84,8 @@ g_SoundPrecache =
 	"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts",
 	"soundevents/voscripts/game_sounds_vo_invoker.vsndevts",
+	"soundevents/game_sounds_heroes/game_sounds_muerta.vsndevts",
+	"soundevents/voscripts/game_sounds_vo_muerta.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts",
 	"soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts",

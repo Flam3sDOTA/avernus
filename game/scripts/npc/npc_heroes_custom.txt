@@ -234,4 +234,84 @@
         "IsNeutralUnitType"				"0"
     }
 
+	"gunslinger"
+    {
+        "override_hero"                	"npc_dota_hero_muerta"
+        "Level"                        	"1"
+        "AbilityLayout"                	"6"
+		
+		"ModelScale"		            "1"
+		"Model"		                    "models/heroes/muerta/muerta_base.vmdl"
+		"RingRadius"					"60"
+        "BoundsHullName"		        "DOTA_HULL_SIZE_HERO"
+		"UnitRelationShipClass"			"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO"
+		"GameSoundsFile"				"soundevents/game_sounds_heroes/game_sounds_muerta.vsndevts"
+		"VoiceFile"						"soundevents/voscripts/game_sounds_vo_muerta.vsndevts"
+		"SoundSet"						"Hero_Muerta"
+		"IdleExpression"				"scenes/muerta/muerta_exp_idle_01.vcd"
+    
+        "Ability1"                    	""
+        "Ability2"                    	""
+        "Ability3"                    	""
+        "Ability4"                    	""
+        "Ability5"                    	""
+        "Ability6"                    	""
+		"Ability7"        				""
+		"Ability8"        				""
+		"Ability9"        				""
+		"Ability10"        				""
+		"Ability11"        				""
+		"Ability12"        				""
+		"Ability13"        				""
+		"Ability14"        				""
+		"Ability15"        				""
+		"Ability16"        				""
+		"Ability17"        				""
+		"Ability18"        				""
+		"Ability19"        				""
+		"Ability20"        				""
+		"Ability21"        				""
+		"Ability22"        				""
+		"Ability23"        				""
+		"Ability24"        				""
+        "Ability25"        				""
+
+        "AttackCapabilities"        	"DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageMin"            	"27"
+        "AttackDamageMax"            	"34"
+        "AttackRate"		            "1.300000"
+        "AttackAnimationPoint"		    "0.35"
+		"AttackAcquisitionRange"		"800"
+        "AttackRange"		            "575"
+
+        "ProjectileModel"		        "particles/units/heroes/hero_muerta/muerta_base_attack.vpcf"
+		"ProjectileSpeed"		        "3000"
+        
+        "ArmorPhysical"                	"0"
+        "MagicalResistance"            	"0"
+       
+        "MovementCapabilities"        	"DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                	"325"
+        "MovementTurnRate"		        "0.7000"
+        
+        "StatusHealth"                	"100"
+		"StatusHealthRegen"				"0"
+        "StatusMana"                	"0"
+		"StatusManaRegen"				"0"
+        
+        "AttributePrimary"		        "DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"			"3"
+		"AttributeStrengthGain"			"2"
+		"AttributeBaseIntelligence"		"1"
+		"AttributeIntelligenceGain"		"1"
+		"AttributeBaseAgility"			"3"
+		"AttributeAgilityGain"			"2"
+        
+        "VisionDaytimeRange"        	"1350"
+        "VisionNighttimeRange"        	"1350"
+
+        "HasInventory"                	"1"
+        "IsNeutralUnitType"				"0"
+    }
+
 }
