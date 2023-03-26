@@ -174,4 +174,8 @@ function InitializeLockedGates()
   Gate3:AddNewModifier( Gate3, nil, "modifier_destructible_gate", { duration = -1 } )
   Gate3:SetAngles(0, 130, 0)
 
+  local Gate4SpawnLocation = Entities:FindByName(nil, "gate4spawnlocation"):GetAbsOrigin()
+  local Gate4 = CreateUnitByName("npc_dota_gate_4", Gate4SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+  Gate4:AddNewModifier( Gate4, nil, "modifier_destructible_gate", { duration = -1 } )
+  Gate4:SetAngles(0, 65, 0)
 end

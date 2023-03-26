@@ -704,11 +704,11 @@
 // KEYS
 //=================================================================================================================
         //=======================================
-        // Iron Gate Key
+        // Gate 1 Key
         //=======================================
-        "item_iron_gate_key"
+        "item_gate_1_key"
         {
-            "AbilityTextureName" 			"item_iron_gate_key"
+            "AbilityTextureName" 			"item_gate_1_key"
             "ItemCost"						"0"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
@@ -717,9 +717,73 @@
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
             "Model"							"models/gameplay/prison_key.vmdl"
             "ItemPurchasable"				"0"
-            "ItemStackable"					"1"
-            "ItemInitialCharges"			"1"
-		    "ItemDisplayCharges"			"1"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "0"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Gate 2 Key
+        //=======================================
+        "item_gate_2_key"
+        {
+            "AbilityTextureName" 			"item_gate_2_key"
+            "ItemCost"						"0"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/gameplay/prison_key.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "0"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Gate 3 Key
+        //=======================================
+        "item_gate_3_key"
+        {
+            "AbilityTextureName" 			"item_gate_3_key"
+            "ItemCost"						"0"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/gameplay/prison_key.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "0"
+            "ItemDroppable" 				"1"
+        }
+
+        //=======================================
+        // Gate 4 Key
+        //=======================================
+        "item_gate_4_key"
+        {
+            "AbilityTextureName" 			"item_gate_4_key"
+            "ItemCost"						"0"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/gameplay/prison_key.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
             "ItemKillable"					"0"
             "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"

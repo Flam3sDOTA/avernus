@@ -449,9 +449,12 @@
 				{
 					"Item"
 					{
-						"1"				"item_iron_gate_key"
+						"1"				"item_gate_1_key"
+						"2"				"item_gate_2_key"
+						"3"				"item_gate_3_key"
+						"4"				"item_gate_4_key"
 					}
-					"Chance"			"100"
+					"Chance"			"50"
 				}
 				"Treasures"
 				{
@@ -606,9 +609,12 @@
 				{
 					"Item"
 					{
-						"1"				"item_iron_gate_key"
+						"1"				"item_gate_1_key"
+						"2"				"item_gate_2_key"
+						"3"				"item_gate_3_key"
+						"4"				"item_gate_4_key"
 					}
-					"Chance"			"100"
+					"Chance"			"50"
 				}
 				"Treasures"
 				{
@@ -1010,6 +1016,202 @@
 	// Destructible Gate Tier 1: Destruction Anim
 	//=================================================================================================================
 	"npc_dota_gate_3_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_destruction.vmdl"
+		"ModelScale"				"0.8"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 1
+	//=================================================================================================================
+	"npc_dota_gate_2"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_locked_01.vmdl"
+		"ModelScale"				"0.8"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 1: Destruction Anim
+	//=================================================================================================================
+	"npc_dota_gate_2_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_destruction.vmdl"
+		"ModelScale"				"0.8"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 1
+	//=================================================================================================================
+	"npc_dota_gate_4"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_locked_01.vmdl"
+		"ModelScale"				"0.8"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 1: Destruction Anim
+	//=================================================================================================================
+	"npc_dota_gate_4_anim"
 	{
 		"BaseClass"					"npc_dota_rotatable_building"	
 		"Model"						"models/props_generic/gate_wooden_destruction.vmdl"
