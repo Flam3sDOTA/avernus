@@ -4,12 +4,12 @@
 // VALUABLE ITEMS
 //=================================================================================================================
         //=======================================
-        // Spider Legs - Valuable - Common: Sell Price 5
+        // Spider Legs - Valuable - Common
         //=======================================
         "item_spider_legs_valuable"
         {
             "AbilityTextureName" 			"item_spider_legs_valuable"
-            "ItemCost"						"5"
+            "ItemCost"						"15"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
             //-------------------------------------------------------------------------------------------------------------
@@ -27,12 +27,12 @@
         }
 
         //=======================================
-        // Bones - Valuable - Common: Sell Price 5
+        // Bones - Valuable - Common
         //=======================================
         "item_bones_valuable"
         {
             "AbilityTextureName" 			"item_bones_valuable"
-            "ItemCost"						"5"
+            "ItemCost"						"15"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
             //-------------------------------------------------------------------------------------------------------------
@@ -50,12 +50,12 @@
         }
 
         //=======================================
-        // Dead Fish - Valuable - Common: Sell Price 5
+        // Dead Fish - Valuable - Common
         //=======================================
         "item_dead_fish_valuable"
         {
             "AbilityTextureName" 			"item_dead_fish_valuable"
-            "ItemCost"						"5"
+            "ItemCost"						"15"
             "ItemShopTags"					"component"
             "ItemQuality"					"component"
             //-------------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@
         }
 
         //=======================================
-        // Energy Crystal - Valuable
+        // Energy Crystal - Valuable - Rare
         //=======================================
         "item_energy_crystal_valuable"
         {
@@ -92,22 +92,45 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "1"
             "ItemDroppable" 				"1"
-            "ItemDisassembleRule"           "DOTA_ITEM_DISASSEMBLE_NEVER"
+            "DisplayOverheadAlertOnReceived"    "0"
         }
 
         //=======================================
-        // Paw of Lucius - Valuable
+        // Philosopher's Stone - Valuable - Rare
+        //=======================================
+        "item_philosophers_stone_valuable"
+        {
+            "AbilityTextureName" 			"item_philosophers_stone_valuable"
+            "ItemCost"						"50"
+            "ItemShopTags"					"rare"
+            "ItemQuality"					"rare"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/moon_shard/moon_shard_005.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
+        }
+
+        //=======================================
+        // Paw of Lucius - Valuable - Epic
         //=======================================
         "item_paw_of_lucius_valuable"
         {
             "AbilityTextureName" 			"item_paw_of_lucius_valuable"
-            "ItemCost"						"250"
+            "ItemCost"						"200"
             "ItemShopTags"					"epic"
             "ItemQuality"					"epic"
             //-------------------------------------------------------------------------------------------------------------
             "BaseClass"                     "item_datadriven"
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl"
+            "Model"							"models/props_gameplay/neutral_box.vmdl"
             "ItemPurchasable"				"0"
             "ItemStackable"					"0"
             "ItemKillable"					"0"
@@ -119,18 +142,18 @@
         }
 
         //=======================================
-        // Bogdugg's Cudgel
+        // Bogdugg's Cudgel - Valuable - Epic
         //=======================================
         "item_bogduggs_cudgel_valuable"
         {
             "AbilityTextureName" 			"item_bogduggs_cudgel_valuable"
-            "ItemCost"						"250"
+            "ItemCost"						"200"
             "ItemShopTags"					"epic"
             "ItemQuality"					"epic"
             //-------------------------------------------------------------------------------------------------------------
             "BaseClass"                     "item_datadriven"
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl"
+            "Model"							"models/props_gameplay/neutral_box.vmdl"
             "ItemPurchasable"				"0"
             "ItemStackable"					"0"
             "ItemKillable"					"0"
@@ -142,15 +165,84 @@
         }
 
         //=======================================
-        // Midas Coin - Valuable
+        // Dendi Doll - Streamer Item - Epic
+        //=======================================
+        "item_dendi_doll_streamer_item"
+        {
+            "AbilityTextureName" 			"item_dendi_doll_streamer_item"
+            "ItemCost"						"200"
+            "ItemShopTags"					"epic"
+            "ItemQuality"					"epic"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/neutral_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
+        }
+
+        //=======================================
+        // Flax Scroll - Streamer Item - Epic
+        //=======================================
+        "item_flax_scroll_streamer_item"
+        {
+            "AbilityTextureName" 			"item_flax_scroll_streamer_item"
+            "ItemCost"						"200"
+            "ItemShopTags"					"epic"
+            "ItemQuality"					"epic"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/neutral_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
+        }
+
+        //=======================================
+        // Pinwheel of LD - Streamer Item - Epic
+        //=======================================
+        "item_pinwheel_of_ld_streamer_item"
+        {
+            "AbilityTextureName" 			"item_pinwheel_of_ld_streamer_item"
+            "ItemCost"						"200"
+            "ItemShopTags"					"epic"
+            "ItemQuality"					"epic"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/neutral_box.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "0"
+        }
+
+        //=======================================
+        // Midas Coin - Valuable - Artifact
         //=======================================
         "item_midas_coin_valuable"
         {
             "AbilityTextureName" 			"item_midas_coin_valuable"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost"						"250"
-            "ItemShopTags"					"epic"
-            "ItemQuality"					"epic"
+            "ItemCost"						"322"
+            "ItemShopTags"					"artifact"
+            "ItemQuality"					"artifact"
             //-------------------------------------------------------------------------------------------------------------
             "BaseClass"                     "item_datadriven"
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -442,11 +534,12 @@
             "ItemRequiresCharges"			"0"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"10"
+            "ItemCost" 						"15"
             "ItemSellable" 					"1"
             "ItemPurchasable" 				"0"
             "ItemStackable" 				"0"
             "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
+            "DisplayOverheadAlertOnReceived"    "0"
             "AbilitySpecial"
             {
                 "01"
@@ -486,11 +579,12 @@
             "ItemRequiresCharges"			"0"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"10"
+            "ItemCost" 						"15"
             "ItemSellable" 					"1"
             "ItemPurchasable" 				"0"
             "ItemStackable" 				"0"
             "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
+            "DisplayOverheadAlertOnReceived"    "0"
             "AbilitySpecial"
             {
                 "01"
@@ -530,11 +624,12 @@
             "ItemRequiresCharges"			"0"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"10"
+            "ItemCost" 						"15"
             "ItemSellable" 					"1"
             "ItemPurchasable" 				"0"
             "ItemStackable" 				"0"
             "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
+            "DisplayOverheadAlertOnReceived"    "0"
             "AbilitySpecial"
             {
                 "01"
@@ -574,13 +669,14 @@
             "ItemRequiresCharges"			"0"
             "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
             "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"10"
+            "ItemCost" 						"15"
             "ItemSellable" 					"1"
             "ItemPurchasable" 				"0"
             "ItemStackable" 				"0"
             "ItemShareability" 				"ITEM_FULLY_SHAREABLE"	
             "UIPickupSound" 				"Item.DropGemShop"
             "UIDropSound" 					"Item.DropGemShop"
+            "DisplayOverheadAlertOnReceived"    "0"
             "AbilitySpecial"
             {
                 "01"
@@ -979,6 +1075,73 @@
         }
 
 //=================================================================================================================
+// PETS
+//=================================================================================================================
+    //============================================================
+	// Aghanim Pet - Ancient
+	//============================================================
+	"item_aghanim_pet"
+	{
+		"BaseClass" 					"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/courier/aghanim_courier/aghanim_courier.vmdl" 
+		"AbilityTextureName" 			"item_aghanim_pet"
+		"ItemDroppable" 				"0"
+		"ItemKillable" 					"0" 
+		"ItemAlertable"					"1"
+		"ItemPermanent"					"1"
+		"ItemRequiresCharges"			"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"ItemCost" 						"0"
+		"ItemSellable" 					"0"
+		"ItemPurchasable" 				"1"
+		"ItemStackable" 				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"99999"
+		"ItemStockInitial"				"1"
+		"ItemShareability" 				"ITEM_NOT_SHAREABLE"	
+		"UIPickupSound" 				"Item.DropGemShop"
+		"UIDropSound" 					"Item.DropGemShop"
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"items/item_aghanim_pet.lua"
+				"Function"		"AghanimPetAncient"
+			}
+		}
+		"Modifiers"
+		{
+			"item_aghanim_pet_modifier"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_NONE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"				"25"
+					"MODIFIER_PROPERTY_EXP_RATE_BOOST"					"25"
+				}
+			}
+		}
+	}
+
+//=================================================================================================================
 // RECIPES
 //=================================================================================================================
+    "item_recipe_aghanim_pet"
+	{
+		"BaseClass"						"item_datadriven"
+		"ItemRecipe"					"1"
+		"ItemCost"						"0"
+		"ItemResult"					"item_aghanim_pet"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"AbilityTextureName" 			"item_recipe_ultimate_scepter"
+		"ItemRequirements"
+		{
+			"01"						"item_dendi_doll_streamer_item;item_flax_scroll_streamer_item;item_pinwheel_of_ld_streamer_item;item_midas_coin_valuable"
+		}
+	}
 }

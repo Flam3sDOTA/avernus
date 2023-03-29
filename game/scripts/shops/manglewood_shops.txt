@@ -18,6 +18,7 @@
 	{
 		"item"	"item_ward_observer"
 		"item"	"item_ward_sentry"
+		"item"	"item_aghanim_pet"
 	}	
 	
 	

@@ -27,6 +27,9 @@ g_ModelPrecache =
 
 	"models/props_gameplay/treasure_chest_gold.vmdl",
 	"models/props_gameplay/treasure_chest001.vmdl",
+
+	"models/props_generic/chest_treasure_02.vmdl",
+	"models/props_generic/chest_treasure_02_open.vmdl",
 }
 
 g_ParticlePrecache =
@@ -51,6 +54,8 @@ g_ParticlePrecache =
 	"particles/units/heroes/hero_bloodseeker/bloodseeker_thirst_owner.vpcf",
 	"particles/units/heroes/hero_ursa/ursa_overpower_buff.vpcf",
 	"particles/dev/library/base_dust_hit.vpcf",
+	"particles/econ/courier/courier_trail_03/courier_trail_03.vpcf",
+
 }
 
 g_ParticleFolderPrecache =

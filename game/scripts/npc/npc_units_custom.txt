@@ -145,6 +145,7 @@
 					"Item"
 					{
 						"1"				"item_energy_crystal_valuable"
+						"2"				"item_philosophers_stone_valuable"
 					}
 					"Chance"			"10"
 				}
@@ -152,7 +153,10 @@
 				{
 					"Item"
 					{
-						"1"				"item_midas_coin_valuable"	
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_dendi_doll_streamer_item"	
+						"3"				"item_flax_scroll_streamer_item"
+						"4"				"item_pinwheel_of_ld_streamer_item"
 					}
 					"Chance"			"5"
 				}
@@ -303,6 +307,7 @@
 					"Item"
 					{
 						"1"				"item_energy_crystal_valuable"
+						"2"				"item_philosophers_stone_valuable"
 					}
 					"Chance"			"10"
 				}
@@ -310,7 +315,10 @@
 				{
 					"Item"
 					{
-						"1"				"item_midas_coin_valuable"	
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_dendi_doll_streamer_item"
+						"3"				"item_flax_scroll_streamer_item"
+						"4"				"item_pinwheel_of_ld_streamer_item"
 					}
 					"Chance"			"5"
 				}
@@ -434,8 +442,11 @@
 					"Item"
 					{
 						"1"				"item_midas_coin_valuable"
+						"2"				"item_dendi_doll_streamer_item"
+						"3"				"item_flax_scroll_streamer_item"
+						"4"				"item_pinwheel_of_ld_streamer_item"
 					}
-					"Chance"			"10"
+					"Chance"			"25"
 				}
 				"ValuablesSpecialItem"
 				{
@@ -454,7 +465,7 @@
 						"3"				"item_gate_3_key"
 						"4"				"item_gate_4_key"
 					}
-					"Chance"			"50"
+					"Chance"			"75"
 				}
 				"Treasures"
 				{
@@ -594,8 +605,11 @@
 					"Item"
 					{
 						"1"				"item_midas_coin_valuable"
+						"2"				"item_dendi_doll_streamer_item"
+						"3"				"item_flax_scroll_streamer_item"
+						"4"				"item_pinwheel_of_ld_streamer_item"
 					}
-					"Chance"			"10"
+					"Chance"			"25"
 				}
 				"ValuablesSpecialItem"
 				{
@@ -614,7 +628,7 @@
 						"3"				"item_gate_3_key"
 						"4"				"item_gate_4_key"
 					}
-					"Chance"			"50"
+					"Chance"			"75"
 				}
 				"Treasures"
 				{
@@ -695,7 +709,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"45"
+		"StatusHealth"				"125"
 		"StatusHealthRegen"			"0.5"
 		"StatusMana"				"100"
 		"StatusManaRegen"			"1"
@@ -758,6 +772,9 @@
 					{
 						"1"				"item_midas_coin_valuable"
 						"2"				"item_paw_of_lucius_valuable"
+						"3"				"item_dendi_doll_streamer_item"
+						"4"				"item_flax_scroll_streamer_item"
+						"5"				"item_pinwheel_of_ld_streamer_item"
 					}
 					"Chance"			"1"
 				}
@@ -1064,104 +1081,6 @@
 	//=================================================================================================================
 	// Destructible Gate Tier 1
 	//=================================================================================================================
-	"npc_dota_gate_2"
-	{
-		"BaseClass"					"npc_dota_rotatable_building"	
-		"Model"						"models/props_generic/gate_wooden_locked_01.vmdl"
-		"ModelScale"				"0.8"
-		"IsDiscoverable"			"1"
-		"Level"						"1"
-		"MaxLevel"					"6"
-		"IsAncient"					"1"
-		"ConsideredHero"			"1"
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"
-
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
-
-		// Bounds
-		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"150"
-		"HealthBarOffset"			"310"
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-		"MovementSpeed"				"0"
-		"MovementTurnRate"			"1"
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"900"
-		"StatusHealthRegen"			"0"
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	}
-
-	//=================================================================================================================
-	// Destructible Gate Tier 1: Destruction Anim
-	//=================================================================================================================
-	"npc_dota_gate_2_anim"
-	{
-		"BaseClass"					"npc_dota_rotatable_building"	
-		"Model"						"models/props_generic/gate_wooden_destruction.vmdl"
-		"ModelScale"				"0.8"
-		"IsDiscoverable"			"1"
-		"Level"						"1"
-		"MaxLevel"					"6"
-		"IsAncient"					"1"
-		"ConsideredHero"			"1"
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"
-
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
-
-		// Bounds
-		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"150"
-		"HealthBarOffset"			"310"
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-		"MovementSpeed"				"0"
-		"MovementTurnRate"			"1"
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"900"
-		"StatusHealthRegen"			"0"
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	}
-
-	//=================================================================================================================
-	// Destructible Gate Tier 1
-	//=================================================================================================================
 	"npc_dota_gate_4"
 	{
 		"BaseClass"					"npc_dota_rotatable_building"	
@@ -1255,5 +1174,42 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//============================================================
+	// Aghanim Pet - Ancient
+	//============================================================
+	"unit_aghanim_pet_ancient"
+	{	
+		//============================================================
+			"vscripts"         				"ai/aghanim_pet.lua"
+			"Model"                 		"models/courier/aghanim_courier/aghanim_courier.vmdl"
+			"ModelScale"               		"1.1"
+			
+			"StatusHealth"          		"9999"
+			"ArmorPhysical"         		"9999"
+			"MagicalResistance"     		"9999"
+			"MovementSpeed"         		"400"
+			"BountyGoldMin"         		"0"
+			"BountyGoldMax"         		"0"
+		//============================================================
+		"SoundSet"              		""
+		"CombatClassDefend"     		"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"StatusMana"            		"0"
+		"BoundsHullName"        		"DOTA_HULL_SIZE_REGULAR"
+		"RingRadius"            		"0"
+		"HealthBarOffset"       		"0"
+		"AttackCapabilities" 			"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackAcquisitionRange" 		"0"
+		"AttackRange" 					"0"
+		"AttackDamageMin" 				"0"
+		"AttackDamageMax" 				"0"
+		"BountyXP"              		"0"
+		"BaseClass"             		"npc_dota_creature"
+		"TeamName"						"DOTA_TEAM_GOODGUYS"
+		"MovementCapabilities"  		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementTurnRate"      		"1"
+		"Level" 						"1"
+		"Ability1"						"invulnerable_pet_ability"
 	}
 }
