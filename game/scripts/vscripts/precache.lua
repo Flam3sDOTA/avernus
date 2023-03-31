@@ -54,8 +54,7 @@ g_ParticlePrecache =
 	"particles/units/heroes/hero_bloodseeker/bloodseeker_thirst_owner.vpcf",
 	"particles/units/heroes/hero_ursa/ursa_overpower_buff.vpcf",
 	"particles/dev/library/base_dust_hit.vpcf",
-	"particles/econ/courier/courier_trail_03/courier_trail_03.vpcf",
-
+	"particles/econ/events/fall_2021/fall_2021_emblem_game_effect.vpcf",
 }
 
 g_ParticleFolderPrecache =

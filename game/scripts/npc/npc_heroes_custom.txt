@@ -56,10 +56,10 @@
         "MovementSpeed"                	"325"
         "MovementTurnRate"            	"1.0"
         
-        "StatusHealth"                	"100"
+        "StatusHealth"                	"400"
 		"StatusHealthRegen"				"0"
-        "StatusMana"                	"0"
-		"StatusManaRegen"				"0"
+        "StatusMana"                	"150"
+		"StatusManaRegen"				"1"
         
         "AttributePrimary"		        "DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"			"5"
@@ -135,10 +135,10 @@
         "MovementSpeed"                	"325"
         "MovementTurnRate"		        "0.7000"
         
-        "StatusHealth"                	"100"
+        "StatusHealth"                	"400"
 		"StatusHealthRegen"				"0"
-        "StatusMana"                	"0"
-		"StatusManaRegen"				"0"
+        "StatusMana"                	"150"
+		"StatusManaRegen"				"1"
         
         "AttributePrimary"		        "DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"			"1"
@@ -214,10 +214,10 @@
         "MovementSpeed"                	"325"
         "MovementTurnRate"		        "0.7000"
         
-        "StatusHealth"                	"100"
+        "StatusHealth"                	"400"
 		"StatusHealthRegen"				"0"
-        "StatusMana"                	"0"
-		"StatusManaRegen"				"0"
+        "StatusMana"                	"150"
+		"StatusManaRegen"				"1"
         
         "AttributePrimary"		        "DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"			"1"
@@ -294,10 +294,10 @@
         "MovementSpeed"                	"325"
         "MovementTurnRate"		        "0.7000"
         
-        "StatusHealth"                	"100"
+        "StatusHealth"                	"400"
 		"StatusHealthRegen"				"0"
-        "StatusMana"                	"0"
-		"StatusManaRegen"				"0"
+        "StatusMana"                	"150"
+		"StatusManaRegen"				"1"
         
         "AttributePrimary"		        "DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"			"3"

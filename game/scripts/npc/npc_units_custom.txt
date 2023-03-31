@@ -428,15 +428,6 @@
 			}	
 			"ItemDrops"
 			{
-				"Consumables"
-				{
-					"Item"
-					{
-						"1"				"item_health_potion"
-						"2"				"item_mana_potion"
-					}
-					"Chance"			"50"
-				}
 				"Valuables"
 				{
 					"Item"
@@ -446,7 +437,7 @@
 						"3"				"item_flax_scroll_streamer_item"
 						"4"				"item_pinwheel_of_ld_streamer_item"
 					}
-					"Chance"			"25"
+					"Chance"			"50"
 				}
 				"ValuablesSpecialItem"
 				{
@@ -591,15 +582,6 @@
 			}	
 			"ItemDrops"
 			{
-				"Consumables"
-				{
-					"Item"
-					{
-						"1"				"item_health_potion"
-						"2"				"item_mana_potion"
-					}
-					"Chance"			"50"
-				}
 				"Valuables"
 				{
 					"Item"
@@ -609,7 +591,7 @@
 						"3"				"item_flax_scroll_streamer_item"
 						"4"				"item_pinwheel_of_ld_streamer_item"
 					}
-					"Chance"			"25"
+					"Chance"			"50"
 				}
 				"ValuablesSpecialItem"
 				{
@@ -754,7 +736,7 @@
 						"3"				"item_mana_potion"
 						"4"				"item_mana_potion"
 					}
-					"Chance"			"12"
+					"Chance"			"25"
 				}
 				"StatTomes"
 				{
@@ -764,7 +746,7 @@
 						"2"				"item_book_of_agility"
 						"3"				"item_book_of_intelligence"
 					}
-					"Chance"			"1"
+					"Chance"			"5"
 				}
 				"Valuables"
 				{
@@ -776,7 +758,7 @@
 						"4"				"item_flax_scroll_streamer_item"
 						"5"				"item_pinwheel_of_ld_streamer_item"
 					}
-					"Chance"			"1"
+					"Chance"			"5"
 				}
 			}
 		}
