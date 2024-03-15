@@ -45,38 +45,12 @@ end
 
 function modifier_destructible_gate:DeclareFunctions()
 	local funcs = {
-		MODIFIER_EVENT_ON_DEATH,
 		MODIFIER_PROPERTY_PROVIDES_FOW_POSITION,
 		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL,
 		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE,
 	}
 
 	return funcs
-end
-
------------------------------------------------------------------------
-
-function modifier_destructible_gate:OnDeath( params )
-	if IsServer() then
-		if params.unit == self:GetParent() and not self:GetParent():IsNull() then
-			local radius = 400
-			self:PlayDustParticle( radius )
-
-			local fShakeAmt = 15
-			local fShakeDuration = 0.75
-
-			ScreenShake( self:GetParent():GetOrigin(), fShakeAmt, 100.0, fShakeDuration, 1300.0, 0, true )
-
-			local szGateWithAnim = self:GetParent():GetUnitName() .. "_anim"
-			local hAnimGate = CreateUnitByName( szGateWithAnim, self:GetParent():GetAbsOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS )
-			local vGateAngles = self:GetParent():GetAnglesAsVector()
-
-			hAnimGate:SetAngles( vGateAngles.x, vGateAngles.y, vGateAngles.z )
-			hAnimGate:AddNewModifier( hAnimGate, nil, "modifier_destructible_gate_anim", {} )
-
-			UTIL_Remove( self:GetParent() )
-		end
-	end
 end
 
 -----------------------------------------------------------------------

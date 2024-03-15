@@ -52,9 +52,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
+		"BountyXP"					"5"
+		"BountyGoldMin"				"1"
+		"BountyGoldMax"				"1"
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -70,7 +70,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"30"
+		"StatusHealth"				"5"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"0"
 		"StatusStartingMana"		"0"
@@ -214,9 +214,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
+		"BountyXP"					"5"
+		"BountyGoldMin"				"1"
+		"BountyGoldMax"				"1"
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -232,7 +232,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"30"
+		"StatusHealth"				"5"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"0"
 		"StatusStartingMana"		"0"
@@ -392,7 +392,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3000"
+		"StatusHealth"				"1000"
 		"StatusHealthRegen"			"3"
 		"StatusMana"				"1000"
 		"StatusManaRegen"			"1"
@@ -546,7 +546,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3000"
+		"StatusHealth"				"1000"
 		"StatusHealthRegen"			"3"
 		"StatusMana"				"1000"
 		"StatusManaRegen"			"1"
@@ -763,6 +763,172 @@
 			}
 		}
 	}
+
+	//=================================================================================
+	// Boss: Roshan the Immortal
+	//=================================================================================
+	"boss_roshan_immortal"
+	{
+		"vscripts"					"ai/ai_boss_roshan.lua"
+
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/roshan_aghanim/roshan_aghanim.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Roshan"
+		"GameSoundsFile"			"soundevents/game_sounds_roshan_halloween.vsndevts"
+		"Level"						"30"
+		"ModelScale" 				"1.4"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"450"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"
+		"MagicalResistance"			"55"
+		
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"150"
+		"AttackDamageMax"			"150"
+		"AttackRate"				"2"
+		"AttackAnimationPoint"		"0.6"
+		"AttackAcquisitionRange"	"150"
+		"AttackRange"				"150"
+		"ProjectileModel"			"particles/base_attacks/ranged_goodguy.vpcf"
+		"ProjectileSpeed"			"1000"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"RingRadius"				"110"
+		"HealthBarOffset"			"400"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"500"
+		"BountyGoldMin"				"500"
+		"BountyGoldMax"				"550"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"270"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"
+		"StatusHealthRegen"			"20"
+		"StatusMana"				"1000"
+		"StatusManaRegen"			"1"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1400"
+		"VisionNighttimeRange"		"1400"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			//Basic AI State
+			//------------------------------------------------------------
+			"DefaultState"				"Invade"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"70.0"
+					"Avoidance"			"30.0"
+					"Support"			"0.0"
+				}
+			}	
+			"ItemDrops"
+			{
+				"Valuables"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_dendi_doll_streamer_item"
+						"3"				"item_flax_scroll_streamer_item"
+						"4"				"item_pinwheel_of_ld_streamer_item"
+					}
+					"Chance"			"100"
+				}
+				"ValuablesSpecialItem"
+				{
+					"Item"
+					{
+						"1"				"item_roshefort_valuable"
+					}
+					"Chance"			"100"
+				}
+				"Keys"
+				{
+					"Item"
+					{
+						"1"				"item_gate_1_key"
+						"2"				"item_gate_2_key"
+						"3"				"item_gate_3_key"
+						"4"				"item_gate_4_key"
+					}
+					"Chance"			"100"
+				}
+				"GoldenTreasures1"
+				{
+					"Item"
+					{
+						"1"				"item_chest_golden"
+					}
+					"Chance"			"100"
+				}
+				"GoldenTreasures2"
+				{
+					"Item"
+					{
+						"1"				"item_chest_golden"
+					}
+					"Chance"			"100"
+				}
+				"GoldenTreasures3"
+				{
+					"Item"
+					{
+						"1"				"item_chest_golden"
+					}
+					"Chance"			"100"
+				}
+			}
+		}
+	}
+
+
+
+
+
+
 
 	//=================================================================================================================
 	// Destructible Gate Tier 1
@@ -1193,5 +1359,495 @@
 		"MovementTurnRate"      		"1"
 		"Level" 						"1"
 		"Ability1"						"invulnerable_pet_ability"
+	}
+
+	//=================================================================================
+	// Creature: Easy Creep
+	//=================================================================================
+	"unit_easy_creep"
+	{
+		// Script
+
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"SoundSet"					"Creep_Good_Melee"
+		"Level"						"1"
+		"ModelScale" 				"0.93"
+		"IsNeutralUnitType"			"1"
+		"vscripts"					""
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2"
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"19"
+		"AttackDamageMax"			"23"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1"
+		"AttackAnimationPoint"		"0.467"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			""
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"
+		"AttributeStrengthGain"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeIntelligenceGain"	"0"
+		"AttributeBaseAgility"		"0"
+		"AttributeAgilityGain"		"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"150"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"57"
+		"BountyGoldMin"				"34"
+		"BountyGoldMax"				"39"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.5"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1300"
+		"VisionNighttimeRange"		"1300"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"PathfindingSearchDepthScale"		"0.1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DefaultState"				"Invade"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}
+			"ItemDrops"
+			{
+				"Consumables"
+				{
+					"Item"
+					{
+						"1"  			"item_health_potion"
+						"2"				"item_health_potion"
+						"3"				"item_mana_potion"
+						"4"				"item_mana_potion"
+					}
+					"Chance"			"25"
+				}
+				"StatTomes"
+				{
+					"Item"
+					{
+						"1"  			"item_book_of_strength"
+						"2"				"item_book_of_agility"
+						"3"				"item_book_of_intelligence"
+					}
+					"Chance"			"5"
+				}
+				"Valuables"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_paw_of_lucius_valuable"
+						"3"				"item_dendi_doll_streamer_item"
+						"4"				"item_flax_scroll_streamer_item"
+						"5"				"item_pinwheel_of_ld_streamer_item"
+					}
+					"Chance"			"5"
+				}
+			}
+		}
+	}
+
+	//=================================================================================
+	// Creature: Armored Creep
+	//=================================================================================
+	"unit_armored_creep"
+	{
+		// Script
+
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+		"SoundSet"					"Creep_Good_Melee"
+		"Level"						"1"
+		"ModelScale" 				"0.93"
+		"IsNeutralUnitType"			"1"
+		"vscripts"					""
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"41"
+		"AttackDamageMax"			"49"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1"
+		"AttackAnimationPoint"		"0.467"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			""
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"
+		"AttributeStrengthGain"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeIntelligenceGain"	"0"
+		"AttributeBaseAgility"		"0"
+		"AttributeAgilityGain"		"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"150"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"77"
+		"BountyGoldMin"				"54"
+		"BountyGoldMax"				"59"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"285"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"500"
+		"StatusHealthRegen"			"0.5"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1300"
+		"VisionNighttimeRange"		"1300"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"PathfindingSearchDepthScale"		"0.1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DefaultState"				"Invade"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}
+			"ItemDrops"
+			{
+				"Consumables"
+				{
+					"Item"
+					{
+						"1"  			"item_health_potion"
+						"2"				"item_health_potion"
+						"3"				"item_mana_potion"
+						"4"				"item_mana_potion"
+					}
+					"Chance"			"25"
+				}
+				"StatTomes"
+				{
+					"Item"
+					{
+						"1"  			"item_book_of_strength"
+						"2"				"item_book_of_agility"
+						"3"				"item_book_of_intelligence"
+					}
+					"Chance"			"5"
+				}
+				"Valuables"
+				{
+					"Item"
+					{
+						"1"				"item_midas_coin_valuable"
+						"2"				"item_paw_of_lucius_valuable"
+						"3"				"item_dendi_doll_streamer_item"
+						"4"				"item_flax_scroll_streamer_item"
+						"5"				"item_pinwheel_of_ld_streamer_item"
+					}
+					"Chance"			"5"
+				}
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Roshan Gate 1
+	//=================================================================================================================
+	"npc_dota_roshan_gate_1"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_locked_03.vmdl"
+		"ModelScale"				"1.2"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Roshan Gate 1 Anim
+	//=================================================================================================================
+	"npc_dota_roshan_gate_1_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_destruction_03.vmdl"
+		"ModelScale"				"1.2"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Roshan Gate 2
+	//=================================================================================================================
+	"npc_dota_roshan_gate_2"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_locked_03.vmdl"
+		"ModelScale"				"1.2"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Roshan Gate 2 Anim
+	//=================================================================================================================
+	"npc_dota_roshan_gate_2_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"	
+		"Model"						"models/props_generic/gate_wooden_destruction_03.vmdl"
+		"ModelScale"				"1.2"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	}
 }

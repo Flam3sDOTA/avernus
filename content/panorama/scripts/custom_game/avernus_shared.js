@@ -1,5 +1,6 @@
 "use strict";
 
+GameUI.SetCameraDistance( 1350 );
 
 function objectValues( obj )
 {

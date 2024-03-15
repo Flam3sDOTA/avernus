@@ -7,9 +7,6 @@
         <include src="file://{resources}/scripts/custom_game/main/avernus_main.js"/>
     </scripts>
 	
-	<script>
-	</script>
-
 	<Panel hittest="false" class="Root">
 
 		<Panel id="MinimapOverlay" hittest="true">
@@ -23,6 +20,5 @@
 			<Button id="NewSettingsButton" class="TopLeftMenuButton" onactivate="DOTAShowSettingsPopup();" onmouseover="UIShowTextTooltip(Settings)"  onmouseout="UIHideTextTooltip()" />
 			<Button id="NewDiscordButton" class="TopLeftMenuButton" onactivate="ExternalBrowserGoToURL('https://discord.gg/K82VSGexps');" onmouseover="UIShowTextTooltip(Join the Discord Server)"  onmouseout="UIHideTextTooltip()" />
 		</Panel>
-
 	</Panel>
 </root>

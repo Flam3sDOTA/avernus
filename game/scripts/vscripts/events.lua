@@ -18,27 +18,9 @@ end
 -- Event: OnHeroInGame
 ---------------------------------------------------------------------------
 function avernus:OnHeroInGame(hero)
-
   for i=1,3 do
     hero:AddItemByName("item_ward_observer")
   end
-
-  if hero:GetUnitName() == "npc_dota_hero_beastmaster" then
-    hero:AddItemByName("item_barbarian_thick_skinned")
-  end
-  
-  if hero:GetUnitName() == "npc_dota_hero_drow_ranger" then
-    hero:AddItemByName("item_ranger_marksmanship")
-  end
-
-  if hero:GetUnitName() == "npc_dota_hero_invoker" then
-    hero:AddItemByName("item_mage_perfectionist")
-  end
-
-  if hero:GetUnitName() == "npc_dota_hero_muerta" then
-    hero:AddItemByName("item_gunslinger_sharpshooter")
-  end
-
 end
 
 ---------------------------------------------------------------------------
@@ -82,13 +64,13 @@ end
 function avernus:OnGameRulesStateChange()
   local nNewState = GameRules:State_Get()
   if nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
-    print( "[PRE_GAME] in Progress" )
   elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 	  Convars:SetInt("dota_max_physical_items_purchase_limit", 9999)
     Convars:SetInt("dota_max_physical_items_drop_limit", 9999)
     Timers:CreateTimer(0.5, function()
       InitializeCrates()
       InitializeVases()
+      InitializeBosses()
       InitializeMiniBosses()
       InitializeGivingTree()
       InitializeLockedGates()
@@ -139,11 +121,19 @@ function InitializeMiniBosses()
 	ParticleManager:SetParticleControl(particleminibosswerewolf, 3, miniboss_werewolf:GetOrigin())
 end
 
+function InitializeBosses()
+  local bossroshanspawnlocation = Entities:FindByName(nil, "boss_spawn_location"):GetAbsOrigin()
+  local boss_roshan = CreateUnitByName("boss_roshan_immortal", bossroshanspawnlocation, true, nil, nil, DOTA_TEAM_NEUTRALS)
+  boss_roshan:AddNewModifier( boss_roshan, nil, "modifier_frozen", { duration = -1 } )
+end
+
 function InitializeGivingTree()
   local GivingTreeRareLootSpawnLocation1 = Entities:FindByName(nil, "giving_tree1"):GetAbsOrigin()
   local GivingTreeRareLootSpawnLocation2 = Entities:FindByName(nil, "giving_tree2"):GetAbsOrigin()
+  local GivingTreeRareLootSpawnLocation3 = Entities:FindByName(nil, "giving_tree3"):GetAbsOrigin()
   local CommonChance = 50
   local RareChance = 10
+  local LegendaryChance = 1
 
   if RollPercentage(CommonChance) then
     local itemcommon = CreateItem("item_energy_crystal_valuable", nil, nil)
@@ -156,26 +146,45 @@ function InitializeGivingTree()
     local posrare = GivingTreeRareLootSpawnLocation2
     local spawnrare = CreateItemOnPositionSync( posrare, itemrare )
   end
+
+  if RollPercentage(LegendaryChance) then
+    local itemlegendary= CreateItem("item_roshan_key", nil, nil)
+    local poslegendary = GivingTreeRareLootSpawnLocation3
+    local spawnlegendary = CreateItemOnPositionSync( poslegendary, itemlegendary )
+  end
 end
 
 function InitializeLockedGates()
   local Gate1SpawnLocation = Entities:FindByName(nil, "gate1spawnlocation"):GetAbsOrigin()
+  local Gate2SpawnLocation = Entities:FindByName(nil, "gate2spawnlocation"):GetAbsOrigin()
+  local Gate3SpawnLocation = Entities:FindByName(nil, "gate3spawnlocation"):GetAbsOrigin()
+  local Gate4SpawnLocation = Entities:FindByName(nil, "gate4spawnlocation"):GetAbsOrigin()
+  local GateRoshan1SpawnLocation = Entities:FindByName(nil, "roshangate1spawnlocation"):GetAbsOrigin()
+  local GateRoshan2SpawnLocation = Entities:FindByName(nil, "roshangate2spawnlocation"):GetAbsOrigin()
+
   local Gate1 = CreateUnitByName("npc_dota_gate_1", Gate1SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+  local Gate2 = CreateUnitByName("npc_dota_gate_2", Gate2SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+  local Gate3 = CreateUnitByName("npc_dota_gate_3", Gate3SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+  local Gate4 = CreateUnitByName("npc_dota_gate_4", Gate4SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+
+  local RoshanGate1 = CreateUnitByName("npc_dota_roshan_gate_1", GateRoshan1SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+  local RoshanGate2 = CreateUnitByName("npc_dota_roshan_gate_2", GateRoshan2SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
+  
   Gate1:AddNewModifier( Gate1, nil, "modifier_destructible_gate", { duration = -1 } )
   Gate1:SetAngles(0, 70, 0)
 
-  local Gate2SpawnLocation = Entities:FindByName(nil, "gate2spawnlocation"):GetAbsOrigin()
-  local Gate2 = CreateUnitByName("npc_dota_gate_2", Gate2SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
   Gate2:AddNewModifier( Gate2, nil, "modifier_destructible_gate", { duration = -1 } )
   Gate2:SetAngles(0, 130, 0)
 
-  local Gate3SpawnLocation = Entities:FindByName(nil, "gate3spawnlocation"):GetAbsOrigin()
-  local Gate3 = CreateUnitByName("npc_dota_gate_3", Gate3SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
   Gate3:AddNewModifier( Gate3, nil, "modifier_destructible_gate", { duration = -1 } )
   Gate3:SetAngles(0, 130, 0)
 
-  local Gate4SpawnLocation = Entities:FindByName(nil, "gate4spawnlocation"):GetAbsOrigin()
-  local Gate4 = CreateUnitByName("npc_dota_gate_4", Gate4SpawnLocation, false, nil, nil, DOTA_TEAM_NEUTRALS)
   Gate4:AddNewModifier( Gate4, nil, "modifier_destructible_gate", { duration = -1 } )
   Gate4:SetAngles(0, 65, 0)
+
+  RoshanGate1:AddNewModifier( Gate4, nil, "modifier_destructible_gate", { duration = -1 } )
+  RoshanGate1:SetAngles(0, 35, 0)
+
+  RoshanGate2:AddNewModifier( Gate4, nil, "modifier_destructible_gate", { duration = -1 } )
+  RoshanGate2:SetAngles(0, 35, 0)
 end

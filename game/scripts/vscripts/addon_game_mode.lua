@@ -7,11 +7,10 @@ require("libraries/projectiles")
 require("libraries/selection")
 require("libraries/timers")
 require("libraries/utility_functions")
+require("addon_init")
 require("events")
+require("util")
 require("precache")
-
-LinkLuaModifier( "modifier_destructible_gate",	"lua_abilities/modifiers/modifier_destructible_gate",	LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_destructible_gate_anim",	"lua_abilities/modifiers/modifier_destructible_gate_anim",	LUA_MODIFIER_MOTION_NONE )
 
 function Precache( context )
 	for _,Item in pairs( g_ItemPrecache ) do
@@ -41,7 +40,6 @@ function Activate()
 end
 
 function avernus:InitGameMode()
-	-- Handle Team Colors
 	self.m_TeamColors = {}
 	self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 178, 34, 34 }		--		Red
 	self.m_TeamColors[DOTA_TEAM_BADGUYS]  = { 0, 100, 0 }		--		Green
@@ -54,7 +52,6 @@ function avernus:InitGameMode()
 	self.m_TeamColors[DOTA_TEAM_CUSTOM_7] = { 0, 0, 0 }	--
 	self.m_TeamColors[DOTA_TEAM_CUSTOM_8] = { 0, 0, 0 }	--
 	
-	-- Handle Player Colors
 	PLAYER_COLORS = {}
     PLAYER_COLORS[0] = "#cc2727;"
     PLAYER_COLORS[1] = "#0ba30b;"
@@ -86,7 +83,6 @@ function avernus:InitGameMode()
 	self.m_VictoryMessages[DOTA_TEAM_CUSTOM_7] = "#VictoryMessage_Custom7"
 	self.m_VictoryMessages[DOTA_TEAM_CUSTOM_8] = "#VictoryMessage_Custom8"
 
-	-- Game Rules
 	GameRules:SetCustomGameAllowMusicAtGameStart(false)
 	GameRules:SetCustomGameAllowBattleMusic(false)
 	GameRules:SetCustomGameAllowHeroPickMusic(false)
@@ -104,11 +100,10 @@ function avernus:InitGameMode()
 	GameRules:SetStrategyTime(0)
 	GameRules:SetShowcaseTime(0)
 	GameRules:SetGoldTickTime(0)
-	GameRules:SetStartingGold(0) -- default 0
+	GameRules:SetStartingGold(0)
 	GameRules:SetGoldPerTick(0)
 	GameRules:SetTimeOfDay(0.751)
 
-	-- Gamemode Rules
 	local GameMode = GameRules:GetGameModeEntity()
 	GameMode:SetUseCustomHeroLevels(false)
 	GameMode:SetCustomXPRequiredToReachNextLevel(XP_PER_LEVEL_TABLE)
@@ -134,7 +129,7 @@ function avernus:InitGameMode()
 	GameMode:SetKillingSpreeAnnouncerDisabled(true)
 	GameMode:SetCanSellAnywhere(true)
 	GameMode:SetCustomBackpackSwapCooldown(0)
-	--GameMode:SetCustomGameForceHero("npc_dota_hero_wisp")
+	GameMode:SetCustomGameForceHero("npc_dota_hero_muerta")
 	--GameMode:SetTPScrollSlotItemOverride("item_blink")
 
 	XP_PER_LEVEL_TABLE = {
@@ -169,7 +164,6 @@ function avernus:InitGameMode()
 		99999  -- 29
 	}
 
-	-- Events
 	ListenToGameEvent("npc_spawned", Dynamic_Wrap(avernus, "OnNPCSpawned"), self)
 	ListenToGameEvent('dota_team_kill_credit', Dynamic_Wrap(avernus, "OnTeamKillCredit" ), self )
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(avernus, 'OnEntityKilled'), self)
@@ -195,5 +189,5 @@ function avernus:InitGameMode()
 	end
 
 	if IsInToolsMode() then
-   end
+	end
 end

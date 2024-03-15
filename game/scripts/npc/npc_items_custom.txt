@@ -188,6 +188,29 @@
         }
 
         //=======================================
+        // Roshefort - Valuable - Epic
+        //=======================================
+        "item_roshefort_valuable"
+        {
+            "AbilityTextureName" 			"item_roshefort_valuable"
+            "ItemCost"						"1000"
+            "ItemShopTags"					"epic"
+            "ItemQuality"					"epic"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "Model"							"models/props_gameplay/cheese.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+            "ItemPermanent"					"0"
+            "ItemSellable"                  "1"
+            "ItemDroppable" 				"1"
+            "DisplayOverheadAlertOnReceived"    "1"
+        }
+
+        //=======================================
         // Flax Scroll - Streamer Item - Epic
         //=======================================
         "item_flax_scroll_streamer_item"
@@ -289,7 +312,6 @@
             "ItemDisplayCharges"			"1"
             "ItemCastOnPickup"				"1"
             "DisplayOverheadAlertOnReceived"    "0"
-
 
             // Special	
             //-------------------------------------------------------------------------------------------------------------
@@ -867,6 +889,8 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "0"
             "ItemDroppable" 				"1"
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
         }
 
         //=======================================
@@ -889,6 +913,8 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "0"
             "ItemDroppable" 				"1"
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
         }
 
         //=======================================
@@ -911,6 +937,8 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "0"
             "ItemDroppable" 				"1"
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
         }
 
         //=======================================
@@ -933,193 +961,32 @@
             "ItemPermanent"					"0"
             "ItemSellable"                  "0"
             "ItemDroppable" 				"1"
-        }
-
-//=================================================================================================================
-// CLASS PASSIVE ITEMS
-//=================================================================================================================
-        //=======================================
-        // Barbarian: Thick Skinned
-        //=======================================
-        "item_barbarian_thick_skinned"
-        { 
-            "BaseClass" 					"item_datadriven"
-            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl" 
-            "AbilityTextureName" 			"item_barbarian_thick_skinned"
-            "ItemDroppable" 				"0"
-            "ItemKillable" 					"0" 
-            "ItemAlertable"					"0"
-            "ItemPermanent"					"0"
-            "ItemRequiresCharges"			"0"
-            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
-            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"0"
-            "ItemSellable" 					"0"
-            "ItemPurchasable" 				"0"
-            "ItemStackable" 				"0"
-            "ItemShareability" 				"ITEM_NOT_SHAREABLE"
-            "ItemIsNeutralDrop"				"1"	
-            "DisplayOverheadAlertOnReceived"    "0"
-            "AbilitySpecial"
-            {
-                "01"
-                {
-                    "var_type"				"FIELD_INTEGER"
-                    "bonus_armor"		    "10"
-                }
-            }
-            "Modifiers"
-            {
-                "item_barbarian_thick_skinned_modifier"
-                {
-                    "Passive" 				"1" 
-                    "IsHidden" 				"1"
-                    "Attributes" 			"MODIFIER_ATTRIBUTE_NONE"
-                    "Properties"
-                    {
-                        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
-                    }
-                }
-            }			
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
         }
 
         //=======================================
-        // Ranger: Marksmanship
+        // Key to Roshan's Lair
         //=======================================
-        "item_ranger_marksmanship"
-        { 
-            "BaseClass" 					"item_datadriven"
+        "item_roshan_key"
+        {
+            "AbilityTextureName" 			"item_roshan_key"
+            "ItemCost"						"0"
+            "ItemShopTags"					"component"
+            "ItemQuality"					"component"
+            //-------------------------------------------------------------------------------------------------------------
+            "BaseClass"                     "item_datadriven"
             "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl" 
-            "AbilityTextureName" 			"item_ranger_marksmanship"
-            "ItemDroppable" 				"0"
-            "ItemKillable" 					"0" 
-            "ItemAlertable"					"0"
+            "Model"							"models/gameplay/prison_key.vmdl"
+            "ItemPurchasable"				"0"
+            "ItemStackable"					"0"
+            "ItemKillable"					"0"
+            "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
             "ItemPermanent"					"0"
-            "ItemRequiresCharges"			"0"
-            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
-            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"0"
-            "ItemSellable" 					"0"
-            "ItemPurchasable" 				"0"
-            "ItemStackable" 				"0"
-            "ItemShareability" 				"ITEM_NOT_SHAREABLE"
-            "ItemIsNeutralDrop"				"1"	
-            "DisplayOverheadAlertOnReceived"    "0"
-            "AbilitySpecial"
-            {
-                "01"
-                {
-                    "var_type"				"FIELD_INTEGER"
-                    "bonus_agility"		    "10"
-                }
-            }
-            "Modifiers"
-            {
-                "item_ranger_marksmanship_modifier"
-                {
-                    "Passive" 				"1" 
-                    "IsHidden" 				"1"
-                    "Attributes" 			"MODIFIER_ATTRIBUTE_NONE"
-                    "Properties"
-                    {
-                        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agility"
-                    }
-                }
-            }			
-        }
-
-        //=======================================
-        // Mage: Perfectionist
-        //=======================================
-        "item_mage_perfectionist"
-        { 
-            "BaseClass" 					"item_datadriven"
-            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl" 
-            "AbilityTextureName" 			"item_mage_perfectionist"
-            "ItemDroppable" 				"0"
-            "ItemKillable" 					"0" 
-            "ItemAlertable"					"0"
-            "ItemPermanent"					"0"
-            "ItemRequiresCharges"			"0"
-            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
-            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"0"
-            "ItemSellable" 					"0"
-            "ItemPurchasable" 				"0"
-            "ItemStackable" 				"0"
-            "ItemShareability" 				"ITEM_NOT_SHAREABLE"
-            "ItemIsNeutralDrop"				"1"	
-            "DisplayOverheadAlertOnReceived"    "0"
-            "AbilitySpecial"
-            {
-                "01"
-                {
-                    "var_type"				"FIELD_INTEGER"
-                    "bonus_spell_amplify"   "10"
-                }
-            }
-            "Modifiers"
-            {
-                "item_mage_perfectionist_modifier"
-                {
-                    "Passive" 				"1" 
-                    "IsHidden" 				"1"
-                    "Attributes" 			"MODIFIER_ATTRIBUTE_NONE"
-                    "Properties"
-                    {
-                        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"			"%bonus_spell_amplify"
-                    }
-                }
-            }			
-        }
-
-        //=======================================
-        // Gunslinger: Sharpshooter
-        //=======================================
-        "item_gunslinger_sharpshooter"
-        { 
-            "BaseClass" 					"item_datadriven"
-            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-            "Model"							"models/props_gameplay/red_box.vmdl" 
-            "AbilityTextureName" 			"item_gunslinger_sharpshooter"
-            "ItemDroppable" 				"0"
-            "ItemKillable" 					"0" 
-            "ItemAlertable"					"0"
-            "ItemPermanent"					"0"
-            "ItemRequiresCharges"			"0"
-            "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
-            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-            "ItemCost" 						"0"
-            "ItemSellable" 					"0"
-            "ItemPurchasable" 				"0"
-            "ItemStackable" 				"0"
-            "ItemShareability" 				"ITEM_NOT_SHAREABLE"
-            "ItemIsNeutralDrop"				"1"	
-            "DisplayOverheadAlertOnReceived"    "0"
-            "AbilitySpecial"
-            {
-                "01"
-                {
-                    "var_type"				"FIELD_INTEGER"
-                    "bonus_damage"          "10"
-                }
-            }
-            "Modifiers"
-            {
-                "item_gunslinger_sharpshooter_modifier"
-                {
-                    "Passive" 				"1" 
-                    "IsHidden" 				"1"
-                    "Attributes" 			"MODIFIER_ATTRIBUTE_NONE"
-                    "Properties"
-                    {
-                        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"			"%bonus_damage"
-                    }
-                }
-            }			
+            "ItemSellable"                  "0"
+            "ItemDroppable" 				"1"
+            "ItemInitialCharges"			"1"
+            "ItemDisplayCharges"			"1"
         }
 
 //=================================================================================================================
@@ -1203,6 +1070,7 @@
 		"ItemShareability" 				"ITEM_NOT_SHAREABLE"	
 		"UIPickupSound" 				"Item.DropGemShop"
 		"UIDropSound" 					"Item.DropGemShop"
+        "ItemIsNeutralDrop"				"1"
 		"OnCreated"
 		{
 			"RunScript"
@@ -1253,7 +1121,7 @@
 		"AbilityTextureName" 			"item_recipe_ultimate_scepter"
 		"ItemRequirements"
 		{
-			"01"						"item_dendi_doll_streamer_item;item_flax_scroll_streamer_item;item_pinwheel_of_ld_streamer_item;item_midas_coin_valuable"
+			"01"						"item_paw_of_lucius_valuable;item_bogduggs_cudgel_valuable;item_midas_coin_valuable"
 		}
 	}
 }

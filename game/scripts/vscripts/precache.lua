@@ -18,27 +18,27 @@ g_ModelPrecache =
 	"models/props_gameplay/bottle_mango001.vmdl",
 	"models/props_gameplay/gold_coin_overthrow.vmdl",
 	"models/props_gameplay/moon_shard/moon_shard_meteor.vmdl",
+	"models/props_gameplay/cheese_large.vmdl",
+	"models/props_gameplay/cheese.vmdl",
 
 	-- Heroes
 	"models/heroes/beastmaster/beastmaster.vmdl",
-	"models/heroes/drow/drow_base.vmdl",
-	"models/heroes/invoker/invoker.vmdl",
-	"models/heroes/muerta/muerta_base.vmdl",
 
 	"models/props_gameplay/treasure_chest_gold.vmdl",
 	"models/props_gameplay/treasure_chest001.vmdl",
 
 	"models/props_generic/chest_treasure_02.vmdl",
 	"models/props_generic/chest_treasure_02_open.vmdl",
+
+	"models/props_generic/gate_wooden_locked_03.vmdl",
+	"models/props_generic/gate_wooden_destruction_03.vmdl",
+
+	"models/creeps/roshan_aghanim/roshan_aghanim.vmdl",
 }
 
 g_ParticlePrecache =
 {
-	"particles/units/heroes/hero_drow/drow_base_attack.vpcf",
-	"particles/units/heroes/hero_invoker/invoker_base_attack.vpcf",
 	"particles/units/heroes/hero_muerta/muerta_base_attack.vpcf",
-	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf",
-	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf",
 	"particles/items3_fx/fish_bones_active.vpcf",
 	"particles/items3_fx/mango_active.vpcf",
 	"particles/units/heroes/hero_monkey_king/monkey_king_jump_armor_debuff_model.vpcf",
@@ -55,6 +55,7 @@ g_ParticlePrecache =
 	"particles/units/heroes/hero_ursa/ursa_overpower_buff.vpcf",
 	"particles/dev/library/base_dust_hit.vpcf",
 	"particles/econ/events/fall_2021/fall_2021_emblem_game_effect.vpcf",
+	"particles/base_attacks/ranged_goodguy.vpcf",
 }
 
 g_ParticleFolderPrecache =
@@ -78,16 +79,9 @@ g_SoundPrecache =
 	-- Units
 	"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts",
+	"soundevents/game_sounds_roshan_halloween.vsndevts",
 	
 	-- Hero Sounds
-	"soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts",
-	"soundevents/voscripts/game_sounds_vo_wisp.vsndevts",
-	"soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts",
-	"soundevents/voscripts/game_sounds_vo_beastmaster.vsndevts",
-	"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts",
-	"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts",
-	"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts",
-	"soundevents/voscripts/game_sounds_vo_invoker.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_muerta.vsndevts",
 	"soundevents/voscripts/game_sounds_vo_muerta.vsndevts",
 	"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts",

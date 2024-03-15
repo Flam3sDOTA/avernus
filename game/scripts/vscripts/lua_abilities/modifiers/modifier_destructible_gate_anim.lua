@@ -51,7 +51,6 @@ function modifier_destructible_gate_anim:DeclareFunctions()
 		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL,
 		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE,
 	}
-
 	return funcs
 end
 

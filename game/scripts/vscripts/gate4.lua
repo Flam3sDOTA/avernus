@@ -11,8 +11,25 @@ function OnStartTouch(trigger)
 				for _, enemy in pairs(enemies) do
 					if enemy:GetUnitName() == "npc_dota_gate_4" then
 						EmitSoundOn("Building_Generic.Destruction", enemy)
-						enemy:ForceKill(true)
 						activator:RemoveItem(gate4key)
+
+						local radius = 400
+						local vPos = enemy:GetOrigin()
+						vPos.z = vPos.z + 100
+						local nFXIndex = ParticleManager:CreateParticle( "particles/dev/library/base_dust_hit.vpcf", PATTACH_CUSTOMORIGIN, nil )
+						ParticleManager:SetParticleControl( nFXIndex, 0, vPos )
+						ParticleManager:SetParticleControl( nFXIndex, 1, Vector( radius, radius, radius ) )
+						ParticleManager:ReleaseParticleIndex( nFXIndex )
+
+						local fShakeAmt = 15
+						local fShakeDuration = 0.75
+						ScreenShake( activator:GetAbsOrigin(), fShakeAmt, 100.0, fShakeDuration, 1300.0, 0, true )
+						local vGateAngles = enemy:GetAnglesAsVector()
+						enemy:ForceKill(true)
+						UTIL_Remove( enemy )
+						local hAnimGate = CreateUnitByName( "npc_dota_gate_4_anim", vPos, false, nil, nil, DOTA_TEAM_BADGUYS )
+						hAnimGate:SetAngles( vGateAngles.x, vGateAngles.y, vGateAngles.z )
+						hAnimGate:AddNewModifier( hAnimGate, nil, "modifier_destructible_gate_anim", {} )
 					end
 				end
 			end

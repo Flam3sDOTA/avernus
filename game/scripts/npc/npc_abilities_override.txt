@@ -1364,4 +1364,44 @@
 	{
 		"ItemPurchasable" "0"
 	}
+	"item_diadem"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_blood_grenade"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_cornucopia"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_pavise"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_tiara_of_selemene"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_phylactery"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_harpoon"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_angels_demise"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_devastator"
+	{
+		"ItemPurchasable" "0"
+	}
+	"item_disperser"
+	{
+		"ItemPurchasable" "0"
+	}
 }
